@@ -1,0 +1,129 @@
+:root {
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --primary-color: #ff7d28;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* fix shadow form control */
+form .form-control:focus {
+    box-shadow: none;
+}
+
+/* fix shadow btn */
+.btn:focus {
+    box-shadow: none;
+}
+
+/* Layout 5 column bootstrap 4 */
+.col-2dot4,
+.col-sm-2dot4,
+.col-md-2dot4,
+.col-lg-2dot4,
+.col-xl-2dot4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
+.col-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+@media (min-width: 576px) {
+    .col-sm-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+/* Breadcrumb */
+.border_bottom {
+    border-bottom: 1px solid #dddddd;
+}
+
+.breadcrumb {
+    border-top: 1px solid #dddddd;
+    background: none;
+    padding: 30px 0 0;
+    margin-bottom: 0;
+}
+
+.breadcrumb-list {
+    line-height: 1.5rem;
+    /* position: relative; */
+}
+
+.breadcrumb-list .breadcrumb-item {
+    /* margin-right: 5px; */
+    font-size: 1.4rem;
+}
+
+.breadcrumb-list .breadcrumb-item a {
+    color: #999;
+}
+
+.breadcrumb-list .breadcrumb-item:hover a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb-list .breadcrumb-item.active {
+    color: var(--primary-color);
+}
