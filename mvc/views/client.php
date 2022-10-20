@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <?php if ($data['page'] === 'product_detail') echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>' ?>
     <?php if (isset($data['css'])) {
-        foreach ($data['css'] as $key => $value) {
+        foreach ($data['css'] as $value) {
     ?>
             <link rel="stylesheet" href="<?php echo _PUBLIC_PATH . '/client/assets/css/' . $value . '.css' ?>" />
     <?php
@@ -23,9 +23,9 @@
 
 <body>
     <div class="wrapper">
-        <?php require_once "./mvc/views/block/client/header.php" ?>
-        <?php require_once './mvc/views/pages/client/' . $data['page'] . '.php' ?>
-        <?php require_once "./mvc/views/block/client/footer.php" ?>
+        <?php require_once VIEW_PATH . "block/client/header.php" ?>
+        <?php require_once VIEW_PAGE_PATH . 'client/' . $data['page'] . '.php' ?>
+        <?php require_once VIEW_PATH . "block/client/footer.php" ?>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

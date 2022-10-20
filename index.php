@@ -2,4 +2,5 @@
 session_start();
 require_once "./mvc/Bridge.php";
 new App();
+
 ?>

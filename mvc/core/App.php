@@ -10,7 +10,7 @@ class App{
         $arr = $this->UrlProcess();
  
         // Controller
-        if( file_exists(CONTROLLER_PATH . $arr[0].".php") ){
+        if(isset($arr[0]) && file_exists(CONTROLLER_PATH . $arr[0] . ".php") ){
             $this->controller = $arr[0];
             unset($arr[0]);
         }

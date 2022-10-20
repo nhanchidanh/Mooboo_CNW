@@ -132,7 +132,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/21_5b264d75-2d71-4121-8dd1-5269f5bc033a_large.jpg?v=1546406774"
                                        alt="hinh1">
@@ -154,7 +154,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Nike Blazer Low</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Nike Blazer Low</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -168,7 +168,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/1_large.jpg?v=1546405215"
                                        alt="hinh2">
@@ -190,7 +190,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html"> Nike Free Metcon</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"> Nike Free Metcon</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -206,7 +206,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/19_fbcc4c05-8e96-4fb9-a305-cca1416d469d_large.jpg?v=1546407706"
                                        alt="hinh1">
@@ -228,7 +228,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Greg Lauren</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Greg Lauren</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -243,7 +243,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/13_f86a0e6e-7174-4f4d-b3f0-246eac02041b_large.jpg?v=1546406358"
                                        alt="hinh1">
@@ -265,7 +265,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Long Sleeve</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Long Sleeve</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -282,7 +282,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/9_68603096-502f-4896-9da6-1dab31605dd9_large.jpg?v=1646301657"
                                        alt="hinh1">
@@ -304,7 +304,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Marathon Adizero</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Marathon Adizero</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -320,7 +320,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/18_a118ddc5-55b0-4859-9e38-426c1d5cc8e7_large.jpg?v=1546407655"
                                        alt="hinh1">
@@ -343,7 +343,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Black Hoodie Unisex</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Black Hoodie Unisex</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -361,7 +361,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/3_large.jpg?v=1546405526"
                                        alt="hinh1">
@@ -383,7 +383,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Hoodie Applique</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Hoodie Applique</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -399,7 +399,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/15_03be3f50-1d2a-4c60-af61-e34c1870c7f8_large.jpg?v=1546406576"
                                        alt="hinh1">
@@ -421,7 +421,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Acronym Jacket</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Acronym Jacket</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -439,7 +439,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/8_large.jpg?v=1546406063"
                                        alt="hinh1">
@@ -461,7 +461,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Zipper Casual</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Zipper Casual</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -477,7 +477,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/17_958b2620-266c-4cd9-be79-6c70e2a28889_large.jpg?v=1546406647"
                                        alt="hinh1">
@@ -499,7 +499,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Light Brown Basic Hoodie</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Light Brown Basic Hoodie</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -517,7 +517,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/7_large.jpg?v=1546406044"
                                        alt="hinh1">
@@ -539,7 +539,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Zipper Casual Red</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Zipper Casual Red</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -555,7 +555,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/28_185c605e-db8b-4fad-af81-c6966ca73e2d_large.jpg?v=1546408014"
                                        alt="hinh1">
@@ -577,7 +577,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Mens jacket</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Mens jacket</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -623,7 +623,7 @@
 
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/21_5b264d75-2d71-4121-8dd1-5269f5bc033a_large.jpg?v=1546406774"
                                        alt="hinh1">
@@ -645,7 +645,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Nike Blazer Low</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Nike Blazer Low</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -662,7 +662,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/1_large.jpg?v=1546405215"
                                        alt="hinh2">
@@ -684,7 +684,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html"> Nike Free Metcon</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"> Nike Free Metcon</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -701,7 +701,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/19_fbcc4c05-8e96-4fb9-a305-cca1416d469d_large.jpg?v=1546407706"
                                        alt="hinh1">
@@ -723,7 +723,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Greg Lauren</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Greg Lauren</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -741,7 +741,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/13_f86a0e6e-7174-4f4d-b3f0-246eac02041b_large.jpg?v=1546406358"
                                        alt="hinh1">
@@ -763,7 +763,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Long Sleeve</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Long Sleeve</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -779,7 +779,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/9_68603096-502f-4896-9da6-1dab31605dd9_large.jpg?v=1646301657"
                                        alt="hinh1">
@@ -801,7 +801,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Marathon Adizero</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Marathon Adizero</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>
@@ -817,7 +817,7 @@
                         <div class="col-12">
                            <div class="product_section">
                               <div class="section-img">
-                                 <a href="product-detail.html" class="product-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
                                     <img
                                        src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/18_a118ddc5-55b0-4859-9e38-426c1d5cc8e7_large.jpg?v=1546407655"
                                        alt="hinh1">
@@ -840,7 +840,7 @@
 
                               <div class="product_content text-left">
                                  <h3 class="product_name">
-                                    <a href="product-detail.html">Black Hoodie Unisex</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Black Hoodie Unisex</a>
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price">300.000vnd</span>

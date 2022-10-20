@@ -1,7 +1,9 @@
 <?php
-define('_WEB_ROOT_PATH','http://' . $_SERVER['HTTP_HOST'] . '/php-mvc_v2');
+
+$array_request_uri = explode("/", $_SERVER['REQUEST_URI']);
+define('_WEB_ROOT_PATH','http://' . $_SERVER['HTTP_HOST'] . '/' . $array_request_uri[1]);
 define('_PUBLIC_PATH', _WEB_ROOT_PATH . '/public');
-define('_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . $_SERVER['REQUEST_URI'] .'/upload');
+define('_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . $array_request_uri[1] .'/upload');
 
 // define('_PATH_AVATAR', _WEB_ROOT . '/upload/avt/');
 // define('_PATH_IMG_PRODUCT', _WEB_ROOT . '/upload/product/');
