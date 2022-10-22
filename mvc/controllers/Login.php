@@ -5,7 +5,7 @@ class Login extends controller {
             'title' => 'Đăng nhập',
             'page' => 'login',
             'css' => ['base', 'main','responsive', 'account'],
-            'js' => 'main'
+            'js' => ['main', 'jquery.validate', 'form_validate']
         ]);
     }
 }

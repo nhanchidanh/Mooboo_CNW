@@ -31,7 +31,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <?php if ($data['page'] === 'product_detail') echo '<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>' ?>
-    <script src="<?php echo _PUBLIC_PATH . '/client/assets/js/' . $data['js'] . '.js' ?>"></script>
+
+    <?php if (isset($data['js'])) {
+        foreach ($data['js'] as $value) {
+    ?>
+            <script src="<?php echo _PUBLIC_PATH . '/client/assets/js/' . $value . '.js' ?>"></script>
+    <?php
+        }
+    } ?>
 </body>
 
 </html>

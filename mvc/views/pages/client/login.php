@@ -19,22 +19,22 @@
                <div class="row">
                   <div class="col-lg-12">
                      <div class="login_form_container">
-                        <form action="" method="post">
+                        <form id="form" action="" method="post">
                            <div class="login_text">
                               <h2>Login</h2>
                               <p>Please login using account detail bellow.</p>
                            </div>
                            <div class="login_form">
-                              <div class="form-group">
+                              <div class="form-group mb-5">
                                  <input id="email" class="form-control" placeholder="Email" type="email" name="email">
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-5">
                                  <input id="password" class="form-control" placeholder="Password" type="password"
                                     name="password">
                               </div>
                               <div class="toggle-btn">
                                  <div class="form-action-button">
-                                    <button class="btn  btn_login" type="submit">Sign In</button>
+                                    <button class="btn btn_login" type="submit">Sign In</button>
                                     <a href="#" class="forget_pass">Forgot your password</a>
                                  </div>
                                  <div class="account-option">

@@ -5,7 +5,7 @@
                   <div class="col-12">
                      <nav>
                         <ol class="breadcrumb-list breadcrumb">
-                           <li class="breadcrumb-item"><a href="#">Home</a></li>
+                           <li class="breadcrumb-item"><a href="<?= _WEB_ROOT_PATH . '/' ?>">Home</a></li>
                            <li class="breadcrumb-item active" aria-current="page">Create Account</li>
                         </ol>
                      </nav>
@@ -19,22 +19,22 @@
                <div class="row">
                   <div class="col-lg-12">
                      <div class="login_form_container">
-                        <form action="" method="post">
+                        <form id="form" action="" method="post">
                            <div class="login_text register_text">
                               <h2>Create Account</h2>
                               <p>Please register using account detail bellow.</p>
                            </div>
                            <div class="login_form">
-                              <div class="form-group">
+                              <div class="form-group mb-5">
                                  <input id="firstname" placeholder="First Name" class="form-control" type="text" name="firstname">
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-5">
                                  <input id="lastname" placeholder="Last Name" class="form-control" type="text" name="lastname">
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-5">
                                  <input id="email" class="form-control" placeholder="Email" type="email" name="email">
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mb-5">
                                  <input id="password" class="form-control" placeholder="Password" type="password"
                                     name="password">
                               </div>

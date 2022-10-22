@@ -1,5 +1,5 @@
 <?php
-class SinhVienModel{
+class SinhVienModel extends DB{
     public function getSV(){
         //connect data base de lay sv ve
 
