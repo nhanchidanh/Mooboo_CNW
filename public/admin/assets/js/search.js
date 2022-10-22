@@ -60,3 +60,15 @@ let table_category = document.querySelector('.table_category');
 let form_category = document.querySelector('.form_category');
 searchInput(input_category, table_category, form_category);
 formSunbmit(form_category, table_category);
+
+
+// Select user group
+let selectGroupUser = document.querySelector('.select-group');
+
+selectGroupUser?.addEventListener("change", function (e) {
+    localStorage.setItem("idSelect", JSON.stringify(e.target.value));
+    setLoading(table_user);
+    setTimeout(() => {
+        form_user.submit();
+    }, 1500);
+});

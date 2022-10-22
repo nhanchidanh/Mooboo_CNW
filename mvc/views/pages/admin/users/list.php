@@ -4,6 +4,16 @@
 <div class="mb-3">
     <form class="input form_user form-inline " action="" method="POST">
         <div class="">
+            <select name="group" id="groupuser" class="custom-select select-group" required>
+                <option>Select....</option>
+                <?php
+                foreach ($data['groups'] as $group) {
+                ?>
+                    <option value="<?php echo $group['id'] ?>"><?php echo $group['name'] ?></option>
+                <?php
+                }
+                ?>
+            </select>
             <input type="text" class="input_user form-control" id="exampleFormControlInput1" placeholder="Search" name="keyword_user">
             <input type="hidden" name="search" value="search">
             <button type="submit" class="btn btn-sm btn-primary">
@@ -82,17 +92,17 @@ if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
                     <td class=""><?php echo $user['name'] ?></td>
                     <td class=""><img src="<?php echo _AVATAR_PATH . $user['avatar'] ?>" class="img-thumbnail" width="100px"></td>
                     <td class=""><?php echo getNameUserGroup($user['gr_id']) ?></td>
-                    <td class="h-[50px]"><?php echo '<p>' . $user['phone'] . '</p>' . '<p>' . $user['email'] . '</p>' . '<p>' . $user['address'] . '</p>' ?></td>
+                    <td class=""><?php echo '<p>' . $user['phone'] . '</p>' . '<p>' . $user['email'] . '</p>' . '<p>' . $user['address'] . '</p>' ?></td>
                     <td class=""><?php echo $user['created_at'] ?></td>
-                    <td class="text-center"><a class="" href="<?php echo _WEB_ROOT_PATH . '/user/update_user/' . $user['id'] ?>"><i class="far fa-edit"></i></a></td>
-                    <td class=" text-center"><a class="handle_delete delete_user" href="<?php echo _WEB_ROOT_PATH . '/user/delete_user/' . $user['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
+                    <td class="text-center"><a class="btn btn-info" href="<?php echo _WEB_ROOT_PATH . '/user/update_user/' . $user['id'] ?>"><i class="far fa-edit"></i></a></td>
+                    <td class=" text-center"><a class="handle_delete btn btn-danger" href="<?php echo _WEB_ROOT_PATH . '/user/delete_user/' . $user['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
             <?php
             }
         } else {
             ?>
             <tr>
-                <td colspan="8" class="text-center bg-info">NO DATA...</td>
+                <td colspan="8" class="text-center">NO DATA...</td>
             </tr>
         <?php
         }

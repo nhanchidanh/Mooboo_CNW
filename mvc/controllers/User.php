@@ -21,10 +21,11 @@ class User extends Controller
             }
         }
         $users = $this->user->getAll($keyword, 0, (int)$gr_id);
-        $group = $this->group->getAll();
+        $groups = $this->group->getAll();
         return $this->view("admin", [
             'page' => 'users/list',
             'users' => $users,
+            'groups' => $groups,
             'js' => ['deletedata', 'search'],
             'title'=> 'USERS'
         ]);
@@ -137,7 +138,7 @@ class User extends Controller
                     'user' => $user,
                     'msg' => $msg,
                     'type' => $type,
-                    'js' => ['uploadImg']
+                    'js' => ['uploadimg']
                 ]);
             } else {
                 $_SESSION['msg'] = $msg;
@@ -150,7 +151,7 @@ class User extends Controller
                 'page' => 'users/update',
                 'user' => $user,
                 'groups' => $groups,
-                'js' => ['uploadImg']
+                'js' => ['uploadimg']
             ]);
         }
     }
