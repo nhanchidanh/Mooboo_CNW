@@ -66,7 +66,7 @@
                                 <a href="<?= _WEB_ROOT_PATH . '/' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'home') echo "active" ?>">Home</a>
                             </li>
                             <li class="nav-item ">
-                                <a href="<?= _WEB_ROOT_PATH . '/product' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'product') echo "active" ?>">Products</a>
+                                <a href="<?= _WEB_ROOT_PATH . '/product/show_product' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'product') echo "active" ?>">Products</a>
                             </li>
                             <li class="nav-item ">
                                 <a href="<?= _WEB_ROOT_PATH . '/faq' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'faq') echo "active" ?>">FAQ</a>

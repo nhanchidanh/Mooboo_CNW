@@ -1,12 +1,12 @@
-<div class="mb-3 flex gap-3">
-    <a class="px-4 py-2 bg-[#000] text-sm text-slate-50 rounded-lg inline-block hover:bg-[#eb6420] hover:text-slate-50 transition-all duration-300" href="<?php echo _WEB_ROOT_PATH . '/category/add_category' ?>">Add category</a>
-    <div class="flex-1">
-        <form class="input flex-1 form_category" action="" method="POST">
-            <div class="flex justify-end">
-                <input type="text" class="input_category inline-block py-2 text-sm form-control transition-all w-80 mr-2" id="exampleFormControlInput1" placeholder="Search" name="keyword_category">
+<div class="mb-3">
+    <a class="px-4 py-2 rounded-lg  btn btn-primary mb-4" href="<?php echo _WEB_ROOT_PATH . '/category/add_category' ?>">Add category</a>
+    <div class="form-inline">
+        <form class="form_category" action="" method="POST">
+            <div class="">
+                <input type="text" class="input_category form-control py-2  form-control " id="exampleFormControlInput1" placeholder="Search" name="keyword_category">
                 <input type="hidden" name="search" value="search">
-                <button type="submit" class="bg-[#000] neutral-900 text-slate-50 rounded inline-block hover:bg-[#eb6420] hover:text-slate-50 transition-all duration-300">
-                    <i class="fas fa-search px-3 py-2"></i>
+                <button type="submit" class="btn btn-primary px-4">
+                    <i class="fas fa-search"></i>
                 </button>
             </div>
         </form>
@@ -75,8 +75,8 @@ if (!empty($_SESSION['msg'])) {
                     <th scope="row"><?php echo $category['id'] ?></th>
                     <td><?php echo $category['name'] ?></td>
                     <td><?php echo $category['created_at'] ?></td>
-                    <td class="text-center"><a class="text-slate-900" href="<?php echo _WEB_ROOT_PATH . '/category/update_category/' . $category['id'] ?>"><i class="far hover:scale-125 hover:text-yellow-500 transition-all duration-300 fa-edit"></i></a></td>
-                    <td class="text-center"><a class="text-slate-900 delete_category handle_delete" href="<?php echo _WEB_ROOT_PATH . '/category/delete_category/' . $category['id'] ?>"><i class="fas hover:scale-125 hover:text-red-600 transition-all duration-300 fa-trash-alt"></i></a></td>
+                    <td class="text-center"><a class="btn btn-info" href="<?php echo _WEB_ROOT_PATH . '/category/update_category/' . $category['id'] ?>"><i class="far fa-edit"></i></a></td>
+                    <td class="text-center"><a class="btn btn-danger handle_delete" href="<?php echo _WEB_ROOT_PATH . '/category/delete_category/' . $category['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
         <?php
             }

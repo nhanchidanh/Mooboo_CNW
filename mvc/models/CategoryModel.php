@@ -4,15 +4,15 @@ class CategoryModel extends DB
     function getAll($keyword = '')
     {
         if (!empty($keyword)) {
-            $sql = "SELECT * FROM category WHERE name like '%" . $keyword . "%'";
+            $sql = "SELECT * FROM category order by id WHERE name like '%" . $keyword . "%'";
         } else {
-            $sql = "SELECT * FROM category ORDER BY name";
+            $sql = "SELECT * FROM category ORDER BY id";
         }
         return $this->pdo_query($sql);
     }
     function getAllCl()
     {
-        $sql = "SELECT category.name, count(product.cate_id) as count_cate FROM category INNER JOIN product ON category.id = product.cate_id GROUP BY category.name ORDER BY name";
+        $sql = "SELECT category.id as id_cate, category.name, count(product.cate_id) as count_cate FROM category INNER JOIN product ON category.id = product.cate_id GROUP BY category.name ORDER BY name";
         return $this->pdo_query($sql);
     }
     function insertCate($name, $created_at)

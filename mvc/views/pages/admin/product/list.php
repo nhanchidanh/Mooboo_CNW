@@ -1,9 +1,9 @@
-<div class="mb-3 flex gap-3">
-    <a class="px-4 py-2 bg-[#000] text-sm text-slate-50 rounded-lg inline-block hover:bg-[#eb6420] hover:text-slate-50 transition-all duration-300" href="<?php echo _WEB_ROOT_PATH . '/product/add_product' ?>">Add product</a>
-    <div class="flex-1 flex justify-end">
-        <form class="input flex form_product" action="" method="POST">
-            <div class="flex gap-3">
-                <select name="category" id="category" class="custom-select w-[160px] select-category" required>
+<div class="mb-3">
+    <a class="px-4 py-2 rounded-lg  btn btn-primary mb-4" href="<?php echo _WEB_ROOT_PATH . '/product/add_product' ?>">Add product</a>
+    <div class="">
+        <form class="form-inline form_product" action="" method="POST">
+            <div class="">
+                <select name="category" id="category" class="custom-select select-category" required>
                     <option>Select....</option>
                     <?php
                     foreach ($data['categories'] as $category) {
@@ -13,13 +13,13 @@
                     }
                     ?>
                 </select>
-                <div class="flex justify-end">
-                    <input type="text" class="input_product inline-block py-2 text-sm form-control transition-all w-80 mr-2" id="exampleFormControlInput1" placeholder="Search" name="keyword_product">
-                    <input type="hidden" name="search" value="search">
-                    <button type="submit" class="bg-[#000] neutral-900 text-slate-50 rounded inline-block hover:bg-[#eb6420] hover:text-slate-50 transition-all duration-300">
-                        <i class="fas fa-search px-3 py-2"></i>
-                    </button>
-                </div>
+
+                <input type="text" class="input_product form-control" id="exampleFormControlInput1" placeholder="Search" name="keyword_product">
+                <input type="hidden" name="search" value="search">
+                <button type="submit" class="btn btn-primary px-4">
+                    <i class="fas fa-search"></i>
+                </button>
+
             </div>
         </form>
     </div>
@@ -86,14 +86,14 @@ if (!empty($_SESSION['msg'])) {
             foreach ($data['products'] as $product) {
         ?>
                 <tr>
-                    <td class="h-[50px] leading-[50px]" scope="row"><?php echo $product['id'] ?></td>
-                    <td class="h-[50px] leading-[50px]"><?php echo $product['name'] ?></td>
-                    <td class="h-[50px] leading-[50px] w-10"><img src="<?php echo _IMG_PRODUCT_PATH . $product['image'] ?>"></td>
-                    <td class="h-[50px] leading-[50px]"><?php echo getNameCate($product['cate_id'])['name'] ?></td>
-                    <td class="h-[50px] leading-[50px]"><?php echo $product['price'] ?></td>
-                    <td class="h-[50px] leading-[50px]"><?php echo $product['created_at'] ?></td>
-                    <td class="h-[50px] leading-[50px] text-center"><a class="text-slate-900" href="<?php echo _WEB_ROOT_PATH . '/product/update_product/' . $product['id'] ?>"><i class="far hover:scale-125 hover:text-yellow-500 transition-all duration-300 fa-edit"></i></a></td>   
-                    <td class="h-[50px] leading-[50px] text-center"><a class="text-slate-900 delete_product" href="<?php echo _WEB_ROOT_PATH . '/product/delete_product/' . $product['id'] ?>"><i class="fas hover:scale-125 hover:text-red-600 transition-all duration-300 fa-trash-alt"></i></a></td>
+                    <td class="" scope="row"><?php echo $product['id'] ?></td>
+                    <td class=""><?php echo $product['name'] ?></td>
+                    <td class=""><img width="100px" src="<?php echo _IMG_PRODUCT_PATH . $product['image'] ?>"></td>
+                    <td class=""><?php echo getNameCate($product['cate_id'])['name'] ?></td>
+                    <td class=""><?php echo $product['price'] ?></td>
+                    <td class=""><?php echo $product['created_at'] ?></td>
+                    <td class="text-center"><a class="btn btn-info" href="<?php echo _WEB_ROOT_PATH . '/product/update_product/' . $product['id'] ?>"><i class="far fa-edit"></i></a></td>
+                    <td class=" text-center"><a class="btn btn-danger handle_delete" href="<?php echo _WEB_ROOT_PATH . '/product/delete_product/' . $product['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
         <?php
             }

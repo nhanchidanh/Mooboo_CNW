@@ -1,8 +1,8 @@
-<a class="btn btn-primary mb-3" href="<?= _WEB_ROOT_PATH . '/user/add_user' ?>">
+<a class="px-4 py-2 rounded-lg  btn btn-primary mb-4" href="<?= _WEB_ROOT_PATH . '/user/add_user' ?>">
     Add user
 </a>
 <div class="mb-3">
-    <form class="input form_user form-inline " action="" method="POST">
+    <form class="form_user form-inline " action="" method="POST">
         <div class="">
             <select name="group" id="groupuser" class="custom-select select-group" required>
                 <option>Select....</option>
@@ -16,8 +16,8 @@
             </select>
             <input type="text" class="input_user form-control" id="exampleFormControlInput1" placeholder="Search" name="keyword_user">
             <input type="hidden" name="search" value="search">
-            <button type="submit" class="btn btn-sm btn-primary">
-                <i class="fas fa-search px-3 py-2"></i>
+            <button type="submit" class="btn btn-primary px-4">
+                <i class="fas fa-search "></i>
             </button>
         </div>
     </form>

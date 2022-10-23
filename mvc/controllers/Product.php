@@ -37,19 +37,23 @@ class Product extends Controller
 
     function show_product()
     {
-        $products = $this->products->getAll();
+        $cate = 0;
+        if(isset($_GET['cate'])){
+            $cate = $_GET['cate'];
+        }
+        $products = $this->products->getAll('', 0, $cate);
         $categories = $this->categories->getAllCl();
-
+        // show_array($categories);
         $productNew = [];
         foreach ($products as $item) {
             $item['detail_img'] = $this->products->getProImg($item['id'])['image'];
             array_push($productNew, $item);
         }
-
         return $this->view('client', [
             'page' => 'product',
-            'css' => ['product'],
-            'js' => ['ajax'],
+            'css' => ['base', 'main','responsive', 'product'],
+            'js' => ['main'],
+            'title' => 'products',
             'products' => $productNew,
             'categories' => $categories
         ]);
@@ -81,8 +85,10 @@ class Product extends Controller
 
             $idProduct = $this->products->insertPro($name, $image, $category, $price, $desc, $create_at);
 
-            foreach ($image_array as $name)
-                $this->products->addImageProduct($idProduct, $name, $create_at);
+            if (!empty($image_array) && $image_array[0] != '') {
+                foreach ($image_array as $name)
+                    $this->products->addImageProduct($idProduct, $name, $create_at);
+            }
 
             if ($idProduct) {
                 $type = 'success';

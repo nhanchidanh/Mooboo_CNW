@@ -1,4 +1,4 @@
-<a class="btn btn-primary mb-3" href="<?= _WEB_ROOT_PATH . '/group/add_group' ?>">
+<a class="px-4 py-2 rounded-lg  btn btn-primary mb-4" href="<?= _WEB_ROOT_PATH . '/group/add_group' ?>">
   Add user group
 </a>
 <div class="mb-3">
@@ -6,8 +6,8 @@
     <div class="">
       <input type="text" class="input_group form-control" id="exampleFormControlInput1" placeholder="Search" name="keyword_group">
       <input type="hidden" name="search" value="search">
-      <button type="submit" class="btn btn-sm btn-primary">
-        <i class="fas fa-search px-3 py-2"></i>
+      <button type="submit" class="btn btn-primary px-4">
+        <i class="fas fa-search"></i>
       </button>
     </div>
   </form>
@@ -80,8 +80,8 @@ if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
           <td><?= $group['name'] ?></td>
           <td><?= $group['created_at'] ?></td>
           <td><?= $group['updated_at'] ?></td>
-          <td><a class="btn btn-outline-primary" href="<?= _WEB_ROOT_PATH . "/group/update_group/" . $group['id'] ?>"><i class="far fa-edit"></i></a></td>
-          <td><a class="handle_delete btn btn-outline-danger" href="<?= _WEB_ROOT_PATH . "/group/delete_group/" . $group['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
+          <td><a class="btn btn-info" href="<?= _WEB_ROOT_PATH . "/group/update_group/" . $group['id'] ?>"><i class="far fa-edit"></i></a></td>
+          <td><a class="handle_delete btn btn-danger" href="<?= _WEB_ROOT_PATH . "/group/delete_group/" . $group['id'] ?>"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
     <?php
       }

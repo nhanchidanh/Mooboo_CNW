@@ -230,7 +230,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?php echo _WEB_ROOT_PATH . '/Product' ?>" class="nav-link <?php if($data['page'] == 'Product/list') echo 'active' ?>">
+            <a href="<?php echo _WEB_ROOT_PATH . '/Product' ?>" class="nav-link <?php if($data['page'] == 'product/list') echo 'active' ?>">
               <i class="fab fa-elementor nav-icon"></i>
               <p>Product</p>
             </a>

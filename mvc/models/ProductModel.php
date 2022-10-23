@@ -160,4 +160,9 @@ class ProductModel extends DB
         }
         return json_encode($_SESSION['cart']);
     }
+
+    function getNewArrivals(){
+        $sql = "SELECT * from product order by created_at desc limit 10";
+        return $this->pdo_query($sql);
+    }
 }

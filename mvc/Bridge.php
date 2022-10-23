@@ -41,4 +41,8 @@ require_once CORE_PATH . "Controller.php";
 require_once CORE_PATH . "DB.php";
 
 require_once HELPER_PATH . "show_array.php";
+
+require_once HELPER_PATH . "getNameCate.php";
+
+require_once HELPER_PATH . "format_money.php";
 ?>
