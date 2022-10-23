@@ -6,7 +6,7 @@
                <nav>
                   <ol class="breadcrumb-list breadcrumb">
                      <li class="breadcrumb-item"><a href="<?= _WEB_ROOT_PATH ?>">Home</a></li>
-                     <li class="breadcrumb-item <?= $_GET['cate'] ?? "active" ?>" aria-current="page">Products</li>
+                     <li class="breadcrumb-item <?= $_GET['cate'] ?? "active" ?>" aria-current="page"><a href="<?= _WEB_ROOT_PATH . '/product/show_product' ?>">Products</a></li>
                      <?php
                      if (isset($_GET['cate'])) {
                         ?>

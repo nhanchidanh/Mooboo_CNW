@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2022 at 11:16 AM
+-- Generation Time: Oct 23, 2022 at 07:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -39,10 +39,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(3, 'balo', '2022-10-22 14:56:17', NULL),
-(4, 'ao khoac', '2022-10-22 14:56:28', NULL),
-(5, 'hoodie', '2022-10-22 14:56:38', NULL),
-(6, 'sneaker', '2022-10-22 14:57:00', NULL);
+(3, 'Bags', '2022-10-22 14:56:17', '2022-10-23 12:12:08'),
+(4, 'Jackets', '2022-10-22 14:56:28', '2022-10-23 12:12:13'),
+(6, 'Sneakers', '2022-10-22 14:57:00', '2022-10-23 12:12:18');
 
 -- --------------------------------------------------------
 
@@ -63,8 +62,7 @@ CREATE TABLE `group_user` (
 
 INSERT INTO `group_user` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', '2022-10-21 05:14:46', '2022-10-21 05:14:46'),
-(2, 'Client', '2022-10-21 05:14:46', '2022-10-21 05:14:46'),
-(22, 'danhhhh', '2022-10-21 22:59:26', '2022-10-21 23:21:50');
+(2, 'Client', '2022-10-21 05:14:46', '2022-10-21 05:14:46');
 
 -- --------------------------------------------------------
 
@@ -85,8 +83,51 @@ CREATE TABLE `img_product` (
 --
 
 INSERT INTO `img_product` (`id`, `product_id`, `image`, `created_at`, `updated_at`) VALUES
-(1, 1, '1666429300651096923.jpeg', '2022-10-22 16:01:40', NULL),
-(2, 1, '16664293001843347161.png', '2022-10-22 16:01:40', NULL);
+(68, 9, '1666531968645376064.png', '2022-10-23 20:32:48', NULL),
+(69, 9, '16665319681061516510.png', '2022-10-23 20:32:48', NULL),
+(70, 9, '1666531968648080427.png', '2022-10-23 20:32:48', NULL),
+(71, 19, '1666532150290554957.png', '2022-10-23 20:35:50', NULL),
+(72, 19, '1666532150590679368.png', '2022-10-23 20:35:50', NULL),
+(73, 19, '16665321501073408373.png', '2022-10-23 20:35:50', NULL),
+(74, 10, '1666532583636206673.png', '2022-10-23 20:43:03', NULL),
+(75, 10, '1666532583737508747.png', '2022-10-23 20:43:03', NULL),
+(76, 10, '1666532583420640433.png', '2022-10-23 20:43:03', NULL),
+(77, 11, '16665326251836089218.png', '2022-10-23 20:43:45', NULL),
+(78, 11, '1666532625538725137.png', '2022-10-23 20:43:45', NULL),
+(79, 11, '16665326252098157282.png', '2022-10-23 20:43:45', NULL),
+(80, 12, '1666532649750085556.png', '2022-10-23 20:44:09', NULL),
+(81, 12, '1666532649999901959.png', '2022-10-23 20:44:09', NULL),
+(82, 12, '16665326491611198297.png', '2022-10-23 20:44:09', NULL),
+(83, 13, '1666532754694136132.png', '2022-10-23 20:45:54', NULL),
+(84, 13, '1666532754298975587.png', '2022-10-23 20:45:54', NULL),
+(85, 13, '1666532754139720840.png', '2022-10-23 20:45:54', NULL),
+(86, 14, '16665327981241609268.png', '2022-10-23 20:46:38', NULL),
+(87, 14, '16665327982071773637.png', '2022-10-23 20:46:38', NULL),
+(88, 14, '1666532798220555586.png', '2022-10-23 20:46:38', NULL),
+(89, 15, '16665328431304841391.png', '2022-10-23 20:47:23', NULL),
+(90, 15, '1666532843595954329.png', '2022-10-23 20:47:23', NULL),
+(91, 15, '1666532843124661285.png', '2022-10-23 20:47:23', NULL),
+(92, 16, '16665328742002961426.png', '2022-10-23 20:47:54', NULL),
+(93, 16, '16665328741309504543.png', '2022-10-23 20:47:54', NULL),
+(94, 16, '16665328742009871674.png', '2022-10-23 20:47:54', NULL),
+(95, 17, '16665328941253914282.png', '2022-10-23 20:48:14', NULL),
+(96, 17, '1666532894793684998.png', '2022-10-23 20:48:14', NULL),
+(97, 17, '1666532894741063559.png', '2022-10-23 20:48:14', NULL),
+(98, 18, '16665334611720418473.0_2', '2022-10-23 20:57:41', NULL),
+(99, 18, '1666533461892696028.0_3', '2022-10-23 20:57:41', NULL),
+(100, 18, '16665334611196268602.0_4', '2022-10-23 20:57:41', NULL),
+(101, 20, '1666533499905554440.png', '2022-10-23 20:58:19', NULL),
+(102, 20, '1666533499582060439.png', '2022-10-23 20:58:19', NULL),
+(103, 20, '16665334991308023472.png', '2022-10-23 20:58:19', NULL),
+(104, 21, '16665335381111267568.png', '2022-10-23 20:58:58', NULL),
+(105, 21, '16665335381557538172.png', '2022-10-23 20:58:58', NULL),
+(106, 21, '1666533538585458514.png', '2022-10-23 20:58:58', NULL),
+(107, 22, '16665342451732663422.Y', '2022-10-23 21:10:45', NULL),
+(108, 22, '16665342451788198637.Y', '2022-10-23 21:10:45', NULL),
+(109, 22, '16665342452087801073.Y', '2022-10-23 21:10:45', NULL),
+(110, 23, '16665342771092445138.png', '2022-10-23 21:11:17', NULL),
+(111, 23, '16665342771576529988.png', '2022-10-23 21:11:17', NULL),
+(112, 23, '16665342771382173395.png', '2022-10-23 21:11:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -99,11 +140,11 @@ CREATE TABLE `product` (
   `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `image` text COLLATE utf8_unicode_ci NOT NULL,
   `cate_id` int(11) NOT NULL,
-  `price` float NOT NULL,
+  `price` float NOT NULL COMMENT 'vnd',
   `description` text COLLATE utf8_unicode_ci DEFAULT NULL,
   `view` int(11) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -111,7 +152,21 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `image`, `cate_id`, `price`, `description`, `view`, `created_at`, `updated_at`) VALUES
-(1, 'doremon', '16664293001579542437.png', 4, 200000, 'desc', 0, '2022-10-22 16:01:40', NULL);
+(9, 'Nike Blazer Low', '16664989221943403164.png', 6, 2499000, 'Praised for its classic simplicity and comfort, the Nike Blazer Low Platform elevates the hoops icon. The lifted midsole/outsole lets you step confidently while the upper keeps the proportions you loved from the original.', 0, '2022-10-23 04:22:02', '2022-10-23 13:32:48'),
+(10, 'Nike Air Force 1', '166649940588764013.png', 6, 2649000, 'The radiance lives on in the Nike Air Force 1, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.', 0, '2022-10-23 04:30:05', '2022-10-23 13:43:03'),
+(11, 'Air Jordan 1 Low SE', '1666500280976865117.png', 6, 2649000, 'Crafted with brilliance, this low-cut AJ1 brings a throwback hue synonymous with the 90s to an all-time classic silhouette.', 0, '2022-10-23 04:44:40', '2022-10-23 13:43:45'),
+(12, 'Nike Air Max 97', '16665010511713578722.png', 6, 4999000, 'With an iconic design inspired by Japanese bullet trains and water droplets, push your style full speed ahead in the Air Max 97. Full-length Nike Air cushioning lets you ride in first-class comfort.', 0, '2022-10-23 04:57:31', '2022-10-23 13:44:09'),
+(13, 'Nike Huarache Run', '16665015171701573176.png', 6, 2089000, 'The Nike Huarache Run is unmistakable.It is all about the famous Huarache heel strap—grab it and slide your foot right in.A snug bootie design helps keep everything secure and supported while you run, climb and play.', 0, '2022-10-23 05:05:17', '2022-10-23 13:45:54'),
+(14, 'Nike Brasilia JDI', '1666502118873677059.png', 3, 1149000, 'Do not be fooled by its small size, this mini backpack has plenty of room. From zip pockets and water-bottle storage to comfy straps, it is perfect for daily adventures. Plus, the fluffy exterior keeps you looking and feeling cosy, even in colder temps.', 0, '2022-10-23 05:15:18', '2022-10-23 13:46:38'),
+(15, 'Nike Heritage', '1666502523907779193.png', 3, 509000, 'The Nike Heritage Crossbody Bag gives you a durable design with multiple compartments to help keep you organised when you are out and about. An adjustable strap lets you customise your carrying experience.', 0, '2022-10-23 05:22:03', '2022-10-23 13:47:23'),
+(16, 'Nike Academy Team', '1666502717784130372.png', 3, 1149000, 'The Nike Academy Team Backpack gives you spacious storage with designated pockets for your phone, laptop and ball. Padding on the straps and back panel lets you comfortably carry your gear.', 0, '2022-10-23 05:25:17', '2022-10-23 13:47:54'),
+(17, 'Nike Kyrie', '1666503144408321939.png', 3, 2089000, 'With multiple zipped compartments, the Kyrie Backpack helps you stay organised while repping your favourite player. Just like Kyrie, this durable bag has a great handle … on your gear! There is also a laptop sleeve and an expandable cinched pocket for a water bottle.', 0, '2022-10-23 05:32:24', '2022-10-23 13:48:14'),
+(18, 'Nike Hayward 2.0', '16665034802120446754.0_1', 3, 1789000, 'The Nike Hayward 2.0 Backpack combines simplicity and functionality with its sleek design and easy-to-access compartments. Its Ripstop fabric adds durability that will not weigh you down. Bungee cord detailing on the exterior provides quick storage for a shell or sneakers.', 0, '2022-10-23 05:38:00', '2022-10-23 13:57:41'),
+(19, 'Jordan Flight MVP', '16665037501654882770.png', 4, 2959000, 'When autumn kicks in, this jacket will be your wardrobes MVP. Lightweight and water-repellent, it zips up to the mock neck collar for extra coverage. Its panel blocking is inspired by Jordan iconic Wings warm-up jacket—a subtle nod to His Airness.', 0, '2022-10-23 05:42:30', '2022-10-23 13:35:50'),
+(20, 'Nike Windrunner', '1666504049896447869.png', 4, 2759000, 'The Nike Windrunner Jacket gets updated with water-repellent materials and a packable design.Vent details on the back and on the chevron help keep you cool when your run heats up.This product is made from at least 50% recycled polyester fibres.', 0, '2022-10-23 05:47:29', '2022-10-23 13:58:19'),
+(21, 'Nike Dri-FIT', '16665043141206580090.png', 4, 1529000, 'Keep your team covered in the Nike Dri-FIT Jacket. Soft woven fabric uses sweat-wicking technology to help keep you covered, cool and comfortable. Customise the colours for your team signature look. This product is made from 100% recycled polyester fibres.', 0, '2022-10-23 05:51:54', '2022-10-23 13:58:58'),
+(22, 'Nike Windrunner D.Y.E', '16665045502097412952.Y', 4, 3109000, 'We updated our classic Windrunner with graphics showing off your brain on exercise. It has the water-repellent and lightweight feel that keeps you going through wind and rain, plus it is packable so you can easily layer down. The jacket is part of the D.Y.E. collection, with artwork that shows how your brain feels after a solid workout.', 0, '2022-10-23 05:55:50', '2022-10-23 14:10:45'),
+(23, 'Nike Life', '1666504737329300715.png', 4, 3109000, 'This chore coat design is inspired by the workwear worn by those who built the cities and streets we walk in today. Give a nod and pull on this all-purpose coat. It is got you covered.', 0, '2022-10-23 05:58:57', '2022-10-23 14:11:17');
 
 -- --------------------------------------------------------
 
@@ -132,14 +187,6 @@ CREATE TABLE `users` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `avatar`, `gr_id`, `email`, `password`, `phone`, `address`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Nhan Chi Danh', '1666411206.png', 22, 'nhanchidanh@gmail.com', '$2y$10$qxKBVRd3FCd4kkgS6NfOeOCs86vZCgXhiSFtKAWN.6hi3DPcL.Y0.', '0945115260', 'ca mau', 'cc', '2022-10-22 11:00:06', '2022-10-22 13:10:16'),
-(4, 'Nhan Chi Danh4', '1666418211.png', 2, 'nhanchidanh@gmail.com', '$2y$10$LhP4wxF6anoh725buE3sSuN1zQfyD13vHwOHplNkteE/lMgJ.TM0.', '0894961521', 'ca mau', 'cc1', '2022-10-22 12:56:51', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -198,19 +245,19 @@ ALTER TABLE `group_user`
 -- AUTO_INCREMENT for table `img_product`
 --
 ALTER TABLE `img_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

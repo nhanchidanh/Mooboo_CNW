@@ -9,7 +9,7 @@ class Product_detail extends Controller{
     {
         $product = $this->products->SelectProduct($id);
         $image_product = $this->products->SelectProductImg($id);
-        // show_array($product);
+        // show_array($product['cate_id']);
         return $this->view("client",[
             'page' => 'product_detail',
             'css' => ['base', 'main','responsive', 'product_detail'],
