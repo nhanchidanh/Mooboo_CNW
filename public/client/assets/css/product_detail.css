@@ -53,7 +53,7 @@
 .btn-submit .btn-buy, .btn-add-cart {
   background: #242424;
   padding: 10px 15px;
-  margin: 12px;
+  margin: 12px 12px 12px 0;
   color: #fff;
 }
 

@@ -11,7 +11,7 @@
                   </ol>
                   <div class="carousel-inner">
                      <div class="carousel-item active" data-interval="3000">
-                        <img src="<?= _PUBLIC_PATH . '/client/assets/img/slider10_edit_2.jpg' ?>" class="carousel-img w-100 d-block" alt="slider">
+                        <img src="<?= _PUBLIC_PATH . '/client/assets/img/slider_1.png' ?>" class="carousel-img w-100 d-block" alt="slider">
                         <div class="carousel-caption d-none d-md-block">
                            <h5 class="text-2">Top Trending</h5>
                            <h1 class="text-1">HANDBAG</h1>
@@ -24,7 +24,7 @@
                         </div>
                      </div>
                      <div class="carousel-item" data-interval="3000">
-                        <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/files/slider11.jpg?v=1547273112" class="carousel-img w-100 d-block" alt="slider">
+                        <img src="<?= _PUBLIC_PATH . '/client/assets/img/slider_2.png'?>" class="carousel-img w-100 d-block" alt="slider">
                         <div class="carousel-caption d-none d-md-block">
                            <h5 class="text-2">New Arrivals</h5>
                            <h1 class="text-1">ZIP HOODIE</h1>
@@ -37,7 +37,7 @@
                         </div>
                      </div>
                      <div class="carousel-item" data-interval="3000">
-                        <img src="https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/5da7ae68-e065-4308-a407-ef243f8373df/image.jpg" class="carousel-img w-100 d-block" alt="slider">
+                        <img src="<?= _PUBLIC_PATH . '/client/assets/img/slider_3.png'?>" class="carousel-img w-100 d-block" alt="slider">
                         <div class="carousel-caption d-none d-md-block">
                            <h5 class="text-2">Top Trending</h5>
                            <h1 class="text-1">SNEAKER</h1>
@@ -61,10 +61,10 @@
             </div>
             <div class="col-lg-4">
                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="col-12">
                      <div class="banner banner-sale banner-sneaker">
                         <a href="#" class="banner-sneaker d-block">
-                           <img class="banner-sneaker-img d-block w-100" src="https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/6038cb1d-c9ee-428f-b2d4-4b45d74b5945/image.jpg" alt="banner-sneaker">
+                           <img class="banner-sneaker-img d-block w-100" src="<?= _PUBLIC_PATH . '/client/assets/img/men_summer.png'?>" alt="banner-sneaker">
                         </a>
                         <div class="banner-content">
                            <h1>
@@ -76,7 +76,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="col-6">
                      <div class="banner banner-sale banner-clothing">
                         <a href="#" class="banner-clothing-link">
                            <img class="banner-clothing-img d-block w-100" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6d7a6b9e-da36-44d5-a7e4-80421b1cb274/life-unlined-chore-coat-zLhb1W.png" alt="banner-clothing">
@@ -87,7 +87,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="col-6">
                      <div class="banner banner-sale banner-bag">
                         <a href="#" class="banner-bag-link">
                            <img class="banner-bag-img d-block w-100" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d88b2de1-fddd-4848-9793-22f9489ef139/kyrie-backpack-kCq7LV.png" alt="banner-bag">
@@ -193,7 +193,7 @@
          <div class="row">
             <div class="col-md-12">
                <a href="#" class="banner_thumb-link">
-                  <img src="https://static.nike.com/a/images/w_1920,c_limit,f_auto,q_auto/fd632041-4f44-4b6d-b7f5-b7762bc39adc/image.jpg" alt="woman_banner" class="img-banner img-fluid">
+                  <img src="<?= _PUBLIC_PATH . '/client/assets/img/thumb_summer.png'?>" alt="summer_banner" class="img-banner img-fluid">
                </a>
             </div>
          </div>

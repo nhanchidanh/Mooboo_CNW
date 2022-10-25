@@ -30,32 +30,51 @@ $(document).ready(function () {
    $('.owl-carousel').owlCarousel({
       loop: true,
       margin: 30,
-      nav: true,
       navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
       dots: false,
-      autoplay: false,
-      autoplayTimeout: 1000,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsiveClass:false,
       responsive: {
          0: {
-            items: 1,
-            nav: true
+            items: 2,
+            nav: false
          },
          767: {
-            items: 3
+            items: 3,
+            nav: true
          },
          1169: {
             items: 5,
-            merge: true
+            // merge: true,
+            // nav: true,
          },
       }
    })
 
 
+   //fix header 
+
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 0) {
+         $('.navbar').addClass('toggle-shadow');
+      } else {
+         $('.navbar').removeClass('toggle-shadow');
+      }
+   });
+   $('.navbar-toggler').click(function (e) { 
+      e.preventDefault();
+      
+   });
+
+   $('.navbar-toggler').click(function (e) { 
+      e.preventDefault();
+      $('.navbar').toggleClass('toggle-shadow');
+   });
 
    // Back-top
-   var showBackTop = 300;
    $(window).scroll(function () {
-      if ($(this).scrollTop() >= showBackTop) {
+      if ($(this).scrollTop() >= 300) {
          $(".back-top").fadeIn();
       } else {
          $(".back-top").fadeOut();
