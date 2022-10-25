@@ -35,6 +35,7 @@ class ProductModel extends DB
         return $this->pdo_execute($delete);
     }
 
+    //Lay thong tin product tu id
     function SelectProduct($id)
     {
         $select = "SELECT * FROM product WHERE id = '$id'";
@@ -44,7 +45,8 @@ class ProductModel extends DB
             return [];
         }
     }
-
+    
+    //Lay tat ca hinh tu product_id
     function SelectProductImg($id)
     {
         $select = "SELECT * FROM img_product WHERE product_id = '$id'";
@@ -79,7 +81,7 @@ class ProductModel extends DB
 
     function getTrendPro()
     {
-        $pro = "SELECT * FROM product ORDER BY view DESC LIMIT 3 ";
+        $pro = "SELECT * FROM product ORDER BY view DESC LIMIT 5 ";
         return $this->pdo_query($pro);
     }
 

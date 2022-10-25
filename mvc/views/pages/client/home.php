@@ -11,7 +11,7 @@
                   </ol>
                   <div class="carousel-inner">
                      <div class="carousel-item active" data-interval="3000">
-                        <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/files/slider10.jpg?v=1547273083" class="carousel-img w-100 d-block" alt="slider">
+                        <img src="<?= _PUBLIC_PATH . '/client/assets/img/slider10_edit_2.jpg' ?>" class="carousel-img w-100 d-block" alt="slider">
                         <div class="carousel-caption d-none d-md-block">
                            <h5 class="text-2">Top Trending</h5>
                            <h1 class="text-1">HANDBAG</h1>
@@ -37,14 +37,14 @@
                         </div>
                      </div>
                      <div class="carousel-item" data-interval="3000">
-                        <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/files/slider12.jpg?v=1547273190" class="carousel-img w-100 d-block" alt="slider">
+                        <img src="https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/5da7ae68-e065-4308-a407-ef243f8373df/image.jpg" class="carousel-img w-100 d-block" alt="slider">
                         <div class="carousel-caption d-none d-md-block">
                            <h5 class="text-2">Top Trending</h5>
-                           <h1 class="text-1">CLOTHING</h1>
+                           <h1 class="text-1">SNEAKER</h1>
                            <p class="text-3">
-                              Lorem ipsum dolor amet, consectetur adipisicing
+                              From tough stitching, to pristine leather, to the cupsole
                               <br>
-                              elit. Vel similique perspiciatis, tempore unde
+                              design, it delivers durable style that's smoother than backboard.
                            </p>
                            <a class="text-4 d-inline-block" href="#">Discover Now</a>
                         </div>
@@ -64,7 +64,7 @@
                   <div class="col-lg-12 col-md-12 col-sm-12">
                      <div class="banner banner-sale banner-sneaker">
                         <a href="#" class="banner-sneaker d-block">
-                           <img class="banner-sneaker-img d-block w-100" src="https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/5da7ae68-e065-4308-a407-ef243f8373df/image.jpg" alt="banner-sneaker">
+                           <img class="banner-sneaker-img d-block w-100" src="https://static.nike.com/a/images/t_prod/w_1920,c_limit,f_auto,q_auto/6038cb1d-c9ee-428f-b2d4-4b45d74b5945/image.jpg" alt="banner-sneaker">
                         </a>
                         <div class="banner-content">
                            <h1>
@@ -140,7 +140,7 @@
 
                            <div class="product_content text-left">
                               <h3 class="product_name">
-                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"><?php echo $data['new_product'][$i]['name']?></a>
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"><?php echo $data['new_product'][$i]['name'] ?></a>
                               </h3>
                               <div class="price-box">
                                  <span class="current-price"><?php echo format_money($data['new_product'][$i]['price']) ?></span>
@@ -170,7 +170,7 @@
 
                            <div class="product_content text-left">
                               <h3 class="product_name">
-                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"><?php echo $data['new_product'][$i]['name']?></a>
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"><?php echo $data['new_product'][$i]['name'] ?></a>
                               </h3>
                               <div class="price-box">
                                  <span class="current-price"><?php echo format_money($data['new_product'][$i]['price']) ?></span>
@@ -193,7 +193,7 @@
          <div class="row">
             <div class="col-md-12">
                <a href="#" class="banner_thumb-link">
-                  <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/files/banner21.jpg?v=1547965073" alt="woman_banner" class="img-banner img-fluid">
+                  <img src="https://static.nike.com/a/images/w_1920,c_limit,f_auto,q_auto/fd632041-4f44-4b6d-b7f5-b7762bc39adc/image.jpg" alt="woman_banner" class="img-banner img-fluid">
                </a>
             </div>
          </div>
@@ -211,228 +211,44 @@
             </div>
          </div>
          <div class="product-area owl-carousel owl-theme" id="owl">
-            <div class="item">
-               <div class="row">
-                  <div class="col-12">
-
-                     <div class="product_section">
-                        <div class="section-img">
-                           <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
-                              <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/21_5b264d75-2d71-4121-8dd1-5269f5bc033a_large.jpg?v=1546406774" alt="hinh1">
-                           </a>
-                           <div>
-                              <div class="product_add">
-                                 <a href="#" class="add-link">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                 </a>
-                              </div>
-                              <div class="product_view">
-                                 <a href="#" class="view-link">+ Quick View</a>
-                              </div>
-                              <div class="product_sale">
-                                 <span class="percent-count">-18%</span>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="product_content text-left">
-                           <h3 class="product_name">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Nike Blazer Low</a>
-                           </h3>
-                           <div class="price-box">
-                              <span class="current-price">300.000vnd</span>
-                              <span class="old-price text-muted">500.000vnd</span>
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-            </div>
-            <div class="item">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="product_section">
-                        <div class="section-img">
-                           <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
-                              <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/1_large.jpg?v=1546405215" alt="hinh2">
-                           </a>
-                           <div>
-                              <div class="product_add">
-                                 <a href="#" class="add-link">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                 </a>
-                              </div>
-                              <div class="product_view">
-                                 <a href="#" class="view-link">+ Quick View</a>
-                              </div>
-                              <div class="product_sale">
-                                 <span class="percent-count">-18%</span>
+            <?php
+            foreach ($data['trend_products'] as  $trend_product) {
+            ?>
+               <div class="item">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="product_section">
+                           <div class="section-img">
+                              <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $trend_product['id'] ?>" class="product-img">
+                                 <img src="<?= _IMG_PRODUCT_PATH . $trend_product['image'] ?>" alt="hinh1">
+                              </a>
+                              <div>
+                                 <div class="product_add">
+                                    <a href="#" class="add-link">
+                                       <i class="fa-solid fa-cart-plus"></i>
+                                    </a>
+                                 </div>
+                                 <div class="product_view">
+                                    <a href="#" class="view-link">+ Quick View</a>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-
-                        <div class="product_content text-left">
-                           <h3 class="product_name">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"> Nike Free Metcon</a>
-                           </h3>
-                           <div class="price-box">
-                              <span class="current-price">300.000vnd</span>
-                              <span class="old-price text-muted">500.000vnd</span>
-                           </div>
-                        </div>
-                     </div>
-
-                  </div>
-               </div>
-            </div>
-            <div class="item">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="product_section">
-                        <div class="section-img">
-                           <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
-                              <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/19_fbcc4c05-8e96-4fb9-a305-cca1416d469d_large.jpg?v=1546407706" alt="hinh1">
-                           </a>
-                           <div>
-                              <div class="product_add">
-                                 <a href="#" class="add-link">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                 </a>
+                           <div class="product_content text-left">
+                              <h3 class="product_name">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>"><?= $trend_product['name']?></a>
+                              </h3>
+                              <div class="price-box">
+                                 <span class="current-price"><?= format_money($trend_product['price'])?></span>
                               </div>
-                              <div class="product_view">
-                                 <a href="#" class="view-link">+ Quick View</a>
-                              </div>
-                              <div class="product_sale">
-                                 <span class="percent-count">-18%</span>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="product_content text-left">
-                           <h3 class="product_name">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Greg Lauren</a>
-                           </h3>
-                           <div class="price-box">
-                              <span class="current-price">300.000vnd</span>
-                              <span class="old-price text-muted">500.000vnd</span>
                            </div>
                         </div>
 
                      </div>
-
                   </div>
                </div>
-            </div>
-            <div class="item">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="product_section">
-                        <div class="section-img">
-                           <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
-                              <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/13_f86a0e6e-7174-4f4d-b3f0-246eac02041b_large.jpg?v=1546406358" alt="hinh1">
-                           </a>
-                           <div>
-                              <div class="product_add">
-                                 <a href="#" class="add-link">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                 </a>
-                              </div>
-                              <div class="product_view">
-                                 <a href="#" class="view-link">+ Quick View</a>
-                              </div>
-                              <div class="product_sale">
-                                 <span class="percent-count">-18%</span>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="product_content text-left">
-                           <h3 class="product_name">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Long Sleeve</a>
-                           </h3>
-                           <div class="price-box">
-                              <span class="current-price">300.000vnd</span>
-                              <span class="old-price text-muted">500.000vnd</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="item">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="product_section">
-                        <div class="section-img">
-                           <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
-                              <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/9_68603096-502f-4896-9da6-1dab31605dd9_large.jpg?v=1646301657" alt="hinh1">
-                           </a>
-                           <div>
-                              <div class="product_add">
-                                 <a href="#" class="add-link">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                 </a>
-                              </div>
-                              <div class="product_view">
-                                 <a href="#" class="view-link">+ Quick View</a>
-                              </div>
-                              <div class="product_sale">
-                                 <span class="percent-count">-18%</span>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="product_content text-left">
-                           <h3 class="product_name">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Marathon Adizero</a>
-                           </h3>
-                           <div class="price-box">
-                              <span class="current-price">300.000vnd</span>
-                              <span class="old-price text-muted">500.000vnd</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="item">
-               <div class="row">
-                  <div class="col-12">
-                     <div class="product_section">
-                        <div class="section-img">
-                           <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>" class="product-img">
-                              <img src="https://cdn.shopify.com/s/files/1/0162/4018/1312/products/18_a118ddc5-55b0-4859-9e38-426c1d5cc8e7_large.jpg?v=1546407655" alt="hinh1">
-
-                           </a>
-                           <div>
-                              <div class="product_add">
-                                 <a href="#" class="add-link">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                 </a>
-                              </div>
-                              <div class="product_view">
-                                 <a href="#" class="view-link">+ Quick View</a>
-                              </div>
-                              <div class="product_sale">
-                                 <span class="percent-count">-18%</span>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="product_content text-left">
-                           <h3 class="product_name">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail' ?>">Black Hoodie Unisex</a>
-                           </h3>
-                           <div class="price-box">
-                              <span class="current-price">300.000vnd</span>
-                              <span class="old-price text-muted">500.000vnd</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <?php
+            }
+            ?>
          </div>
       </div>
    </div>

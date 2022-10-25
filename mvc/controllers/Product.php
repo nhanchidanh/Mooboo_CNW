@@ -53,7 +53,7 @@ class Product extends Controller
             'page' => 'product',
             'css' => ['base', 'main','responsive', 'product'],
             'js' => ['main'],
-            'title' => 'products',
+            'title' => 'Products',
             'products' => $productNew,
             'categories' => $categories
         ]);

@@ -1,6 +1,6 @@
 $.validator.setDefaults({
     submitHandler: function () {
-        alert("submitted!");
+        document.querySelector('#form').submit();
     }
 });
 $(document).ready(function () {
@@ -63,6 +63,7 @@ $(document).ready(function () {
         },
         unhightline: function (element, errorClass, validClass) {
             $(element).addClass("is-valid").removeClass("is-invalid");
-        }
+        },
+        
     });
 });

@@ -87,8 +87,19 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item <?php if ($data['page'] === 'login') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/login' ?>">Login</a></li>
-                                    <li><a class="dropdown-item <?php if ($data['page'] === 'register') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/register' ?>">Register</a></li>
+                                    <?php
+                                    if (!isset($_SESSION['user'])) {
+                                    ?>
+                                        <li><a class="dropdown-item <?php if ($data['page'] === 'login') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/login' ?>">Login</a></li>
+                                        <li><a class="dropdown-item <?php if ($data['page'] === 'register') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/register' ?>">Register</a></li>
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <li><a class="dropdown-item <?php if ($data['page'] === 'register') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/logout' ?>">Logout</a></li>
+                                    <?php
+                                    }
+                                    ?>
+
                                 </ul>
                             </li>
                         </ul>

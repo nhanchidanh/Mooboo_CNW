@@ -58,6 +58,7 @@ class DB
      */
     function pdo_query($sql)
     {
+    
         $sql_args = array_slice(func_get_args(), 1);
         try {
             // $this->conn = pdo_get_connection();
@@ -80,6 +81,7 @@ class DB
      */
     function pdo_query_one($sql)
     {
+        
         $sql_args = array_slice(func_get_args(), 1);
         try {
             // $this->conn = pdo_get_connection();

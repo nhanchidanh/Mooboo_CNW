@@ -82,23 +82,30 @@ $(document).ready(function () {
       $(this).toggleClass("show");
       $(this).next(".dropdown-menu").slideToggle('fast');
    });
+   //swiper
+   
+   var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+   });
+   var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+         swiper: swiper,
+      },
+   });
 });
 
-//swiper
-
-var swiper = new Swiper(".mySwiper", {
-   spaceBetween: 10,
-   slidesPerView: 4,
-   freeMode: true,
-   watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".mySwiper2", {
-   spaceBetween: 10,
-   navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-   },
-   thumbs: {
-      swiper: swiper,
-   },
-});
+//set timeout message
+let msg = document.querySelector('#message');
+if(msg){
+   setTimeout(()=>{
+      msg.classList.add("d-none")
+   },3000)
+}
