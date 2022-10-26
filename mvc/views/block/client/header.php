@@ -103,9 +103,9 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form action="#" class="form-search form-inline ml-lg-auto">
+                        <form action="<?= _WEB_ROOT_PATH . '/product/show_product' ?>" method="GET" class="form-search form-inline ml-lg-auto">
                             <input type="text" name="search" id="search" placeholder="Search here..." class="search-input form-control rounded-pill">
-                            <button class="btn btn-search"><i class="search-icon fa-solid fa-magnifying-glass"></i></button>
+                            <button type="submit" class="btn btn-search"><i class="search-icon fa-solid fa-magnifying-glass"></i></button>
                         </form>
                         <div class="cart-box d-none d-lg-block m-2">
                             <a href="#" class="cart-link btn">

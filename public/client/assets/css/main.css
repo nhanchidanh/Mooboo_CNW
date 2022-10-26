@@ -556,8 +556,10 @@ a.product-img {
 }
 
 .product_content .product_name a {
-   color: #999;
+   color: #242424;
    text-decoration: none;
+   font-size: 2rem;
+   font-weight: 500;
 }
 
 .product_content .product_name:hover a {
@@ -565,8 +567,8 @@ a.product-img {
 }
 
 .price-box .current-price {
-   font-size: 14px;
-   font-weight: 600;
+   font-size: 1.5rem;
+   font-weight: 400;
    color: #242424;
 }
 

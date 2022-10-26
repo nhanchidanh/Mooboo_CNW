@@ -37,11 +37,17 @@ class Product extends Controller
 
     function show_product()
     {
+        $keyword = '';
         $cate = 0;
-        if(isset($_GET['cate'])){
-            $cate = $_GET['cate'];
+        if(isset($_GET['search'])){
+            $keyword = $_GET['search'];
+            $cate = 0;
         }
-        $products = $this->products->getAll('', 0, $cate);
+        else if(isset($_GET['cate'])){
+            $cate = $_GET['cate'];
+            $keyword = '';
+        }
+        $products = $this->products->getAll($keyword, 0, $cate);
         $categories = $this->categories->getAllCl();
         // show_array($categories);
         $productNew = [];

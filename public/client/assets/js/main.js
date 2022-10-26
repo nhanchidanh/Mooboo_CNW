@@ -58,19 +58,15 @@ $(document).ready(function () {
    $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
          $('.navbar').addClass('toggle-shadow');
-      } else {
+      }else if($(this).scrollTop() == 0){
          $('.navbar').removeClass('toggle-shadow');
+         $('.navbar-toggle').click(function (e) { 
+            e.preventDefault();
+            $('.navbar').addClass('toggle-shadow');
+         });
       }
    });
-   $('.navbar-toggler').click(function (e) { 
-      e.preventDefault();
-      
-   });
-
-   $('.navbar-toggler').click(function (e) { 
-      e.preventDefault();
-      $('.navbar').toggleClass('toggle-shadow');
-   });
+  
 
    // Back-top
    $(window).scroll(function () {

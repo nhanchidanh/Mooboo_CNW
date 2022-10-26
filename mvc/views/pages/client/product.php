@@ -66,41 +66,45 @@
 
                <div class="row shop_wrapper">
                   <?php
-                  foreach ($data['products'] as $product) {
-                     // echo $product['name'];
-                  ?>
-                     <div class="col-lg-3 col-sm-6 col-12 col-md-4">
-                        <div class="product_section">
-                           <div class="section-img">
-                              <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $product['id'] ?>" class="product-img">
-                                 <img src="<?= _IMG_PRODUCT_PATH . $product['image'] ?>" alt="hinh1">
-
-                              </a>
-                              <div>
-                                 <div class="product_add">
-                                    <a href="#" class="add-link">
-                                       <i class="fa-solid fa-cart-plus"></i>
-                                    </a>
-                                 </div>
-                                 <div class="product_view">
-                                    <a href="#" class="view-link">+ Quick View</a>
+                  if(!empty($data['products'])){
+                     foreach ($data['products'] as $product) {
+                     ?>
+                        <div class="col-lg-3 col-sm-6 col-12 col-md-4">
+                           <div class="product_section">
+                              <div class="section-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $product['id'] ?>" class="product-img">
+                                    <img src="<?= _IMG_PRODUCT_PATH . $product['image'] ?>" alt="hinh1">
+   
+                                 </a>
+                                 <div>
+                                    <div class="product_add">
+                                       <a href="#" class="add-link">
+                                          <i class="fa-solid fa-cart-plus"></i>
+                                       </a>
+                                    </div>
+                                    <div class="product_view">
+                                       <a href="#" class="view-link">+ Quick View</a>
+                                    </div>
                                  </div>
                               </div>
-                           </div>
-
-                           <div class="product_content text-left">
-                              <h3 class="product_name">
-                                 <a href="product-detail.html"><?= $product['name'] ?></a>
-                              </h3>
-                              <div class="price-box">
-                                 <span class="current-price"><?= format_money($product['price']) ?></span>
+   
+                              <div class="product_content text-left">
+                                 <h3 class="product_name">
+                                    <a href="product-detail.html"><?= $product['name'] ?></a>
+                                 </h3>
+                                 <div class="price-box">
+                                    <span class="current-price"><?= format_money($product['price']) ?></span>
+                                 </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                  <?php
+                     <?php
+                     }
+                  }else {
+                     echo '<div class="text-center w-100 p-5"><h2>Not found product!</h2></div>';
                   }
                   ?>
+                  
                </div>
             </div>
          </div>

@@ -4,9 +4,9 @@
 }
 
 .product-title {
-  color: #747474;
+  color: #242424;
   line-height: 20px;
-  font-size: 1.8rem;
+  font-size: 3.8rem;
   margin-bottom: 15px;
 }
 
@@ -20,6 +20,11 @@
 
 .product_price {
   margin-bottom: 11px;
+}
+
+.product_price .current_price {
+  font-size: 2.3rem;
+  font-weight: 500;
 }
 
 .product-quantity {
@@ -47,21 +52,22 @@
 
 .btn-submit {
   display: flex;
-  
+
 }
 
-.btn-submit .btn-buy, .btn-add-cart {
+.btn-submit .btn-buy,
+.btn-add-cart {
   background: #242424;
   padding: 10px 15px;
   margin: 12px 12px 12px 0;
   color: #fff;
 }
 
-.btn-submit .btn-buy:hover{
+.btn-submit .btn-buy:hover {
   background-color: var(--primary-color);
 }
 
-.btn-submit .btn-add-cart:hover{
+.btn-submit .btn-add-cart:hover {
   background-color: var(--primary-color);
 }
 
