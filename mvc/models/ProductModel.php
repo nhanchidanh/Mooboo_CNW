@@ -17,6 +17,24 @@ class ProductModel extends DB
         return $this->pdo_query($pro);
     }
 
+    //Phan trang
+    function getProByPage($keyword = '', $id = 0, $cate_id = 0, $start, $num_per_page)
+    {
+        $pro = "SELECT * FROM product WHERE 1";
+        if (!empty($keyword)) {
+            $pro .= " AND  name like '%" . $keyword . "%'";
+        }
+
+        if ($id > 0) {
+            $pro .= " AND id <> $id";
+        }
+        if ($cate_id > 0) {
+            $pro .= " AND cate_id = $cate_id";
+        }
+        $pro .= " LIMIT $start, $num_per_page";
+        return $this->pdo_query($pro);
+    }
+
     function insertPro($name, $image, $cate_id, $price, $desc, $create_at)
     {
         $pro = "INSERT INTO product(name, image, cate_id, price, description, created_at) VALUE('$name', '$image', '$cate_id','$price', '$desc', '$create_at')";

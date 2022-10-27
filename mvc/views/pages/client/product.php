@@ -9,9 +9,9 @@
                      <li class="breadcrumb-item <?= $_GET['cate'] ?? "active" ?>" aria-current="page"><a href="<?= _WEB_ROOT_PATH . '/product/show_product' ?>">Products</a></li>
                      <?php
                      if (isset($_GET['cate'])) {
-                        ?>
+                     ?>
                         <li class="breadcrumb-item active" aria-current="page"><?= getNameCate($_GET['cate'])['name'] ?></li>
-                        <?php
+                     <?php
                      } else {
                         echo "";
                      }
@@ -64,17 +64,18 @@
                   </div>
                </div>
 
-               <div class="row shop_wrapper">
+               <!-- <div class="row shop_wrapper">
                   <?php
-                  if(!empty($data['products'])){
+                  if (!empty($data['products'])) {
+                     $count_product = count($data['products']);
                      foreach ($data['products'] as $product) {
-                     ?>
+                  ?>
                         <div class="col-lg-3 col-sm-6 col-12 col-md-4">
                            <div class="product_section">
                               <div class="section-img">
                                  <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $product['id'] ?>" class="product-img">
                                     <img src="<?= _IMG_PRODUCT_PATH . $product['image'] ?>" alt="hinh1">
-   
+
                                  </a>
                                  <div>
                                     <div class="product_add">
@@ -87,7 +88,7 @@
                                     </div>
                                  </div>
                               </div>
-   
+
                               <div class="product_content text-left">
                                  <h3 class="product_name">
                                     <a href="product-detail.html"><?= $product['name'] ?></a>
@@ -98,14 +99,91 @@
                               </div>
                            </div>
                         </div>
-                     <?php
+                  <?php
                      }
-                  }else {
+                  } else {
                      echo '<div class="text-center w-100 p-5"><h2>Not found product!</h2></div>';
                   }
                   ?>
-                  
+
+               </div> -->
+               <div class="row shop_wrapper">
+                  <?php
+                  if (!empty($data['pro_per_page'])) {
+                     foreach ($data['pro_per_page'] as $product) {
+                  ?>
+                        <div class="col-lg-3 col-sm-6 col-12 col-md-4">
+                           <div class="product_section">
+                              <div class="section-img">
+                                 <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $product['id'] ?>" class="product-img">
+                                    <img src="<?= _IMG_PRODUCT_PATH . $product['image'] ?>" alt="hinh1">
+
+                                 </a>
+                                 <div>
+                                    <div class="product_add">
+                                       <a href="#" class="add-link">
+                                          <i class="fa-solid fa-cart-plus"></i>
+                                       </a>
+                                    </div>
+                                    <div class="product_view">
+                                       <a href="#" class="view-link">+ Quick View</a>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="product_content text-left">
+                                 <h3 class="product_name">
+                                    <a href="product-detail.html"><?= $product['name'] ?></a>
+                                 </h3>
+                                 <div class="price-box">
+                                    <span class="current-price"><?= format_money($product['price']) ?></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                  <?php
+                     }
+                  } else {
+                     echo '<div class="text-center w-100 p-5"><h2>Not found product!</h2></div>';
+                  }
+                  ?>
+
                </div>
+
+
+
+
+               <nav aria-label="Page navigation example">
+                  <ul class="pagination pagination-lg justify-content-end">
+                     <li class="page-item ">
+                        <a class="page-link" href="
+                        <?php
+                        if(isset($_GET['page']) && $_GET['page'] > 1)
+                         {echo _WEB_ROOT_PATH . '/product/show_product?page='. (int)($_GET['page']-1);}
+                        else echo "#";
+                        ?>
+                        ">Previous</a>
+                     </li>
+                     <li class="page-item"><a class="page-link" href="<?= _WEB_ROOT_PATH . '/product/show_product'?>">1</a></li>
+
+                     <?php
+                     if ($count_product > $data['num_per_page']) {
+                        $page = ceil($count_product / $data['num_per_page']);
+
+                        for ($i = 2; $i <= $page; $i++) {
+                     ?>
+                           <li class="page-item"><a class="page-link" href="<?= _WEB_ROOT_PATH . '/product/show_product?page=' . $i?>"><?= $i ?></a></li>
+                        <?php
+                        }
+                        ?>
+                     <?php
+                     }
+                     ?>
+                     <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                     </li>
+                  </ul>
+               </nav>
             </div>
          </div>
       </div>

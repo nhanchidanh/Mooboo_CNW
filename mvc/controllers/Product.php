@@ -49,17 +49,24 @@ class Product extends Controller
         }
         $products = $this->products->getAll($keyword, 0, $cate);
         $categories = $this->categories->getAllCl();
-        // show_array($categories);
         $productNew = [];
         foreach ($products as $item) {
             $item['detail_img'] = $this->products->getProImg($item['id'])['image'];
             array_push($productNew, $item);
         }
+
+        $page = (isset($_GET['page'])) ? $_GET['page'] : 1 ;
+        $num_per_page = 5;
+        $start = ($page - 1) * $num_per_page;
+        $pro_per_page = $this->products->getProByPage($keyword, 0, $cate, $start, $num_per_page);
+        // show_array($pro_per_page);
         return $this->view('client', [
             'page' => 'product',
             'css' => ['base', 'main','responsive', 'product'],
             'js' => ['main'],
             'title' => 'Products',
+            'pro_per_page' => $pro_per_page,
+            'num_per_page' => $num_per_page,
             'products' => $productNew,
             'categories' => $categories
         ]);
