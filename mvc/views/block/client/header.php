@@ -46,13 +46,13 @@
                                     <a href="#">View Cart</a>
                                 </div>
                                 <div class="checkout cart_button">
-                                    <a href="#">Check Out</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/cart/' ?>">Check Out</a>
                                 </div>
                             </div>
                             <div class="mini_cart_empty">
                                 <h5>Your cart is currently empty.</h5>
                                 <div class="checkout cart_button">
-                                    <a href="#">Check Out</a>
+                                    <a href="<?= _WEB_ROOT_PATH . '/cart/' ?>">Check Out</a>
                                 </div>
                             </div>
                         </div>
@@ -82,20 +82,20 @@
                                     My Account
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right mb-2">
-                                    <li><a class="dropdown-item" href="#">My Account</a></li>
-                                    <li><a class="dropdown-item" href="#">My Wishlist</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
                                     <?php
-                                    if (!isset($_SESSION['user'])) {
-                                    ?>
+                                    if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+                                        ?>
+                                        <li><a class="dropdown-item" href="#"><?= $_SESSION['user']['name'] ?></a></li>
+                                        <li><a class="dropdown-item" href="#">My Wishlist</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item <?php if ($data['page'] === 'register') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/logout' ?>">Logout</a></li>
+                                        <?php
+                                    } else {
+                                        ?>
                                         <li><a class="dropdown-item <?php if ($data['page'] === 'login') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/login' ?>">Login</a></li>
                                         <li><a class="dropdown-item <?php if ($data['page'] === 'register') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/register' ?>">Register</a></li>
-                                    <?php
-                                    } else {
-                                    ?>
-                                        <li><a class="dropdown-item <?php if ($data['page'] === 'register') echo "active" ?>" href="<?= _WEB_ROOT_PATH . '/Auth/logout' ?>">Logout</a></li>
                                     <?php
                                     }
                                     ?>
@@ -149,7 +149,7 @@
                                 <div class="mini_cart_empty">
                                     <h5>Your cart is currently empty.</h5>
                                     <div class="checkout cart_button">
-                                        <a href="#">Check Out</a>
+                                        <a href="<?= _WEB_ROOT_PATH . '/cart/' ?>">Check Out</a>
                                     </div>
                                 </div>
                             </div>

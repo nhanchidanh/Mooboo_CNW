@@ -39,36 +39,43 @@ class Product extends Controller
     {
         $keyword = '';
         $cate = 0;
-        if(isset($_GET['search'])){
+        
+        if (isset($_GET['search'])) {
             $keyword = $_GET['search'];
             $cate = 0;
-        }
-        else if(isset($_GET['cate'])){
+        } else if (isset($_GET['cate'])) {
             $cate = $_GET['cate'];
             $keyword = '';
         }
-        $products = $this->products->getAll($keyword, 0, $cate);
+        
+        //Tinh tong cac ban ghi
+        $total_product = $this->products->countPro($keyword);
+        $limit = 8;
+        //Tong so trang
+        $total_page = ceil($total_product / $limit);
+        //Lay trang hien tai
+        $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+        $start = ($current_page - 1) * $limit;
+
+        $products = $this->products->getAll($keyword, 0, $cate, $start, $limit);
         $categories = $this->categories->getAllCl();
         $productNew = [];
         foreach ($products as $item) {
             $item['detail_img'] = $this->products->getProImg($item['id'])['image'];
             array_push($productNew, $item);
         }
-
-        $page = (isset($_GET['page'])) ? $_GET['page'] : 1 ;
-        $num_per_page = 5;
-        $start = ($page - 1) * $num_per_page;
-        $pro_per_page = $this->products->getProByPage($keyword, 0, $cate, $start, $num_per_page);
-        // show_array($pro_per_page);
+        // show_array($keyword);
         return $this->view('client', [
             'page' => 'product',
-            'css' => ['base', 'main','responsive', 'product'],
+            'css' => ['base', 'main', 'responsive', 'product'],
             'js' => ['main'],
             'title' => 'Products',
-            'pro_per_page' => $pro_per_page,
-            'num_per_page' => $num_per_page,
             'products' => $productNew,
-            'categories' => $categories
+            'categories' => $categories,
+            'total_page' => $total_page,
+            'current_page' => $current_page,
+            'keyword' => $keyword
         ]);
     }
 

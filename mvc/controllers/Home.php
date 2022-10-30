@@ -8,7 +8,7 @@ class Home extends Controller{
     function index(){
         $new_product = $this->product->getNewArrivals();
         $trend_products = $this->product->getTrendPro();
-        // show_array($trend_product);
+        // show_array($_SESSION );
         $this->view("client", [
             'title' => 'Home',
             'page' => 'home',

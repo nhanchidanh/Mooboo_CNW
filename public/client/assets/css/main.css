@@ -453,7 +453,7 @@ a.product-img {
    height: 50px;
    line-height: 50px;
    font-size: 15px;
-   color: #999;
+   color: #747474;
    background: #fff;
    display: block;
    text-align: center;
@@ -477,7 +477,7 @@ a.product-img {
 
 .product_view .view-link {
    line-height: 45px;
-   color: #999;
+   color: #747474;
    padding: 0 10px;
    font-weight: 500;
    border-radius: 2px;
