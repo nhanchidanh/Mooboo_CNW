@@ -1,24 +1,17 @@
 <?php
 class ProductModel extends DB
 {
-    function getAll($keyword = '', $id = 0, $cate_id = 0)
-    {
-        $pro = "SELECT * FROM product WHERE 1";
-        if (!empty($keyword)) {
-            $pro .= " AND  name like '%" . $keyword . "%'";
+    function countPro($keyword = '') {
+        $number = "SELECT * FROM product WHERE 1";
+        if(!empty($keyword)){
+            $number .= " AND name like '%" . $keyword . "%'";
         }
+        return count($this->pdo_query($number));
 
-        if ($id > 0) {
-            $pro .= " AND id <> $id";
-        }
-        if ($cate_id > 0) {
-            $pro .= " AND cate_id = $cate_id";
-        }
-        return $this->pdo_query($pro);
     }
 
-    //Phan trang
-    function getProByPage($keyword = '', $id = 0, $cate_id = 0, $start, $num_per_page)
+
+    function getAll($keyword = '', $id = 0, $cate_id = 0, $start = 0, $limit = 8)
     {
         $pro = "SELECT * FROM product WHERE 1";
         if (!empty($keyword)) {
@@ -31,7 +24,7 @@ class ProductModel extends DB
         if ($cate_id > 0) {
             $pro .= " AND cate_id = $cate_id";
         }
-        $pro .= " LIMIT $start, $num_per_page";
+        $pro .= " LIMIT $start, $limit";
         return $this->pdo_query($pro);
     }
 
@@ -121,6 +114,11 @@ class ProductModel extends DB
         } else {
             return [];
         }
+    }
+
+    function getProInCate($id, $cate_id) {
+        $pro = "SELECT * FROM product WHERE cate_id = '$cate_id' AND id <> '$id'";
+        return $this->pdo_query($pro);
     }
 
     function addProductCart($id, $number = 1)

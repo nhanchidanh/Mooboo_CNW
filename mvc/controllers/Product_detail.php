@@ -9,14 +9,16 @@ class Product_detail extends Controller{
     {
         $product = $this->products->SelectProduct($id);
         $image_product = $this->products->SelectProductImg($id);
-        // show_array($product['cate_id']);
+        $related_products = $this->products->getProInCate($id, $product['cate_id']);
+        // show_array($related_product);
         return $this->view("client",[
             'page' => 'product_detail',
             'css' => ['base', 'main','responsive', 'product_detail'],
+            'js' => ['main'],
+            'title' => 'detail',
             'product' => $product,
             'image_product' => $image_product,
-            'js' => ['main'],
-            'title' => 'detail'
+            'related_products' => $related_products
         ]);
     }
 }
