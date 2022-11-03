@@ -59,8 +59,14 @@ window.addEventListener('load',function(){
         }
     }
 
-//sao kh click thẳng luon mà lại forEach?
     btnDelete.forEach(item=> {
         item.addEventListener('click',deleteData);
     });
 })
+
+let notify = document.querySelector('#notify');
+if(notify){
+   setTimeout(() => {
+      notify.classList.add("d-none")
+   }, 3000);
+}

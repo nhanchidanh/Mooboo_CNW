@@ -64,7 +64,7 @@ $(document).ready(function () {
    });
 
    // Mini_cart toggle
-   $(".cart-box").click(function () {
+   $(".cart-link.btn i").click(function () {
       $(".mini_cart").stop().slideToggle("fast");
       // return false;
    });
@@ -101,3 +101,4 @@ if(msg){
       msg.classList.add("d-none")
    },3000)
 }
+

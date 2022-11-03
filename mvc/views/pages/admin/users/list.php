@@ -59,7 +59,7 @@
 <?php
 if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
 ?>
-    <div class="alert alert-success" role="alert">
+    <div id="notify" class="alert alert-success" role="alert">
         <?php echo $_SESSION['msg'] ?>
     </div>
 <?php
@@ -90,7 +90,7 @@ if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
                 <tr>
                     <td class="" scope="row"><?php echo $user['id'] ?></td>
                     <td class=""><?php echo $user['name'] ?></td>
-                    <td class=""><img src="<?php echo _AVATAR_PATH . $user['avatar'] ?>" class="img-thumbnail" width="100px"></td>
+                    <td class=""><img src="<?= _AVATAR_PATH . $user['avatar'] ?>" class="img-thumbnail" width="100px"></td>
                     <td class=""><?php echo getNameUserGroup($user['gr_id']) ?></td>
                     <td class=""><?php echo '<p>' . $user['phone'] . '</p>' . '<p>' . $user['email'] . '</p>' . '<p>' . $user['address'] . '</p>' ?></td>
                     <td class=""><?php echo $user['created_at'] ?></td>

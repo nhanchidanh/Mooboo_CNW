@@ -39,26 +39,36 @@ class Product extends Controller
     {
         $keyword = '';
         $cate = 0;
-        
+        $min = 0;
+        $max = 99999999;
+
         if (isset($_GET['search'])) {
             $keyword = $_GET['search'];
-            $cate = 0;
+            // $cate = 0;
         } else if (isset($_GET['cate'])) {
             $cate = $_GET['cate'];
-            $keyword = '';
+            // $keyword = '';
         }
-        
+
+        if (isset($_GET['min'])) {
+            $min = $_GET['min'];
+        }
+
+        if (isset($_GET['max'])) {
+            $max = $_GET['max'];
+        }
+
         //Tinh tong cac ban ghi
-        $total_product = $this->products->countPro($keyword);
+        $total_product = $this->products->countPro($keyword, 0, $cate, $min, $max);
         $limit = 8;
-        //Tong so trang
-        $total_page = ceil($total_product / $limit);
         //Lay trang hien tai
         $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-
+        
         $start = ($current_page - 1) * $limit;
+        //Tong so trang
+        $total_page = ceil($total_product / $limit);
 
-        $products = $this->products->getAll($keyword, 0, $cate, $start, $limit);
+        $products = $this->products->getAll($keyword, 0, $cate, $start, $limit, $min, $max);
         $categories = $this->categories->getAllCl();
         $productNew = [];
         foreach ($products as $item) {
@@ -69,13 +79,13 @@ class Product extends Controller
         return $this->view('client', [
             'page' => 'product',
             'css' => ['base', 'main', 'responsive', 'product'],
-            'js' => ['main'],
+            'js' => ['main', 'ajax'],
             'title' => 'Products',
             'products' => $productNew,
             'categories' => $categories,
             'total_page' => $total_page,
             'current_page' => $current_page,
-            'keyword' => $keyword
+            'cate' => $cate
         ]);
     }
 

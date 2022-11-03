@@ -29,45 +29,43 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
-                            <td><button class="btn btn-danger" type="submit">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
-                            <td><button class="btn btn-danger" type="submit">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                            <td><button class="btn btn-danger" type="submit">Delete</button></td>
-                        </tr>
+                        <?php
+                        if (!empty($_SESSION['cart'])) {
+                            $sum = 0;
+                            foreach ($_SESSION['cart'] as $cart) {
+                                $sum += (int)$cart['total'];
+                        ?>
+                                <tr>
+                                    <th scope="row">
+                                        <img width="100px" src="<?= _IMG_PRODUCT_PATH . $cart['image'] ?>" alt="">
+                                    </th>
+                                    <td><?= $cart['name'] ?></td>
+                                    <td><?= format_money($cart['price']) ?></td>
+                                    <td><?= $cart['number'] ?></td>
+                                    <td><?= format_money($cart['total']) ?></td>
+                                    <td>
+                                        <div class="btn_group">
+                                            <button data-id="<?= $cart['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>" class="btn_remove btn btn-danger" type="submit">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                        <?php
+                            }
+                        }
+                        ?>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="6">
                                 <div class="total-price float-right">
-                                    <b class="display-5">Total Price: <span>50,000,000vnd</span></b>
+                                    <b class="display-5 cart_total_price">Total Price: <span><?= format_money($sum) ?></span></b>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="6">
                                 <div class="float-right">
-                                    <button class="btn btn-lg btn-outline-dark px-4 py-4" type="submit">Update Cart</button>
-                                    <a href="#" class="btn btn-lg btn-outline-dark px-5 py-4 ml-3">Pay</a>
-                                    <a href="#" class="btn btn-lg btn-outline-dark px-4 py-4 ml-3">Remove Cart</a>
+                                    <a href="<?= _WEB_ROOT_PATH . "/checkout" ?>" class="btn btn-lg btn-outline-dark px-5 py-4 ml-3">Checkout</a>
                                 </div>
                             </td>
                         </tr>

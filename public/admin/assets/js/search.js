@@ -90,3 +90,23 @@ selectCategory?.addEventListener("change", function (e) {
         form_product.submit();
     }, 1500);
 });
+
+// bill
+let input_bill = document.querySelector('.input_bill');
+let table_bill = document.querySelector('.table_bill');
+let form_bill = document.querySelector('.form_bill');
+searchInput(input_bill, table_bill, form_bill);
+formSunbmit(form_bill, table_bill);
+
+// select status
+let selectStatus = document.querySelector('.select-status');
+if(selectStatus){
+    selectStatus.value = JSON.parse(localStorage.getItem('idSelect'));
+}
+    selectStatus?.addEventListener("change", function (e) {
+    localStorage.setItem("idSelect", JSON.stringify(e.target.value));
+    setLoading(table_bill);
+    setTimeout(() => {
+        form_bill.submit();
+    }, 1500);
+});

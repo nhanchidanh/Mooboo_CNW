@@ -29,7 +29,7 @@ class Auth extends Controller
 
     function handleRegister()
     {
-       
+
         if (isset($_POST['register']) && $_POST['register'] != '') {
             $firstname = $_POST['firstname'];
             $lastname = $_POST['lastname'];
@@ -55,7 +55,6 @@ class Auth extends Controller
                 $message = 'Email already exists!';
                 $checkLogin = false;
                 $_SESSION['msg'] = $message;
-              
             } else {
                 $password = password_hash($password, PASSWORD_DEFAULT);
                 $status = $this->users->InsertUser($name, $email, $password, $create_at);
@@ -74,7 +73,7 @@ class Auth extends Controller
                 $_SESSION['msg'] = $message;
                 header('Location: ' . _WEB_ROOT_PATH . '/Auth/login');
             } else {
-               
+
                 header('Location: ' . _WEB_ROOT_PATH . '/Auth/register');
             }
         }
@@ -92,8 +91,11 @@ class Auth extends Controller
             if (!empty($user)) {
                 if (password_verify($password, $user['password'])) {
                     $_SESSION['user'] = $user;
-
-                    header('Location: ' . _WEB_ROOT_PATH . '/home');
+                    if ((int)$user['gr_id'] == 1) {
+                        header('Location: ' . _WEB_ROOT_PATH . '/admin');
+                    } else {
+                        header('Location: ' . _WEB_ROOT_PATH . '/home');
+                    }
                 } else {
                     $_SESSION['msglg'] = 'Incorrect password';
                     $_SESSION['typelg'] = 'danger';

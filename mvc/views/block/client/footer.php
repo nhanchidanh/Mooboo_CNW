@@ -55,11 +55,11 @@
                         <div class="footer_top_container footer_contact">
                             <h3>Contact Us</h3>
                             <p>
-                                Address: 6688 Princess Road, London, Greater London BAS 23JK, UK
+                                Address: 3/2, Hung Loi, Ninh Kieu Can Tho, Viet Nam
                                 <br>
-                                Phone: (+012) 800 456 789 - 987
+                                Phone: (+84) 945 xxx 260
                                 <br>
-                                Email: Contact@plazathemes.com
+                                Email: mooboo123@gmail.com
                             </p>
                             <ul class="footer_top_menu">
                                 <li class="footer_contact_item"><a class="footer_contact_link" href="#"><i class="fa-brands fa-twitter"></i></a></li>

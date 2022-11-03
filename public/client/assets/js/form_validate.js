@@ -8,6 +8,7 @@ $(document).ready(function () {
         rules: {
             firstname: "required",
             lastname: "required",
+            fullname: "required",
             username: {
                 required: true,
                 minlength: 2
@@ -25,28 +26,28 @@ $(document).ready(function () {
                 required: true,
                 email: true
             },
+            address: "required",
+            phone: "required",
             agree: "required"
         },
         messages: {
-            firstname: "Vui lòng nhập họ của bạn",
-            lastname: "Vui lòng nhập tên của bạn",
+            firstname: "Please enter a firstname",
+            lastname: "Please enter a lastname",
+            fullname: "Please enter a fullname",
             username: {
-                required: "Vui lòng nhập tên đăng nhập",
-                minlength: "Tên đăng nhập phải có ít nhất 2 ký tự"
+                required: "Please enter a username",
+                minlength: "Username must have at least 2 characters"
             },
             password: {
-                required: "Vui lòng nhập mật khẩu",
-                minlength: "Mật khẩu phải có ít nhất 5 ký tự"
-            },
-            confirm_password: {
-                required: "Vui lòng nhập lại mật khẩu",
-                minlength: "Mật khẩu phải có ít nhất 5 ký tự",
-                equalTo: "Mật khẩu không khớp với mật khẩu đã nhập"
+                required: "Please enter a password",
+                minlength: "Password must have at least 2 characters"
             },
             email: {
-                required: "Vui lòng nhập email",
-                email: "Email không đúng định dạng"
+                required: "Please enter a email address",
+                email: "Invalid email format"
             },
+            address: "Vui lòng nhập đầy đủ địa chỉ",
+            phone: "Vui lòng nhập SĐT",
             agree: "Vui lòng đồng ý với các điều khoản của chúng tôi"
         },
         errorElement: "div",

@@ -1,10 +1,10 @@
 <?php
-
 $array_request_uri = explode("/", $_SERVER['REQUEST_URI']);
+define('NAME_PROJECT', $array_request_uri[1]);
 
-define('_WEB_ROOT_PATH','http://' . $_SERVER['HTTP_HOST'] . '/' . $array_request_uri[1]);
+define('_WEB_ROOT_PATH','http://' . $_SERVER['HTTP_HOST'] . '/' . NAME_PROJECT);
 define('_PUBLIC_PATH', _WEB_ROOT_PATH . '/public');
-define('_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . $array_request_uri[1] .'/upload');
+define('_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . NAME_PROJECT .'/upload');
 
 define('_AVATAR_PATH', _WEB_ROOT_PATH . '/upload/avt/');
 define('_IMG_PRODUCT_PATH', _WEB_ROOT_PATH . '/upload/product/');
@@ -45,4 +45,8 @@ require_once HELPER_PATH . "show_array.php";
 require_once HELPER_PATH . "getNameCate.php";
 
 require_once HELPER_PATH . "format_money.php";
+
+require_once HELPER_PATH . "redirecTo.php";
+
+require_once HELPER_PATH . "getStatusBill.php";
 ?>

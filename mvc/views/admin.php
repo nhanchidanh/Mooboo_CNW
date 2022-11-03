@@ -1,4 +1,8 @@
-
+<?php
+if((int)$_SESSION['user']['gr_id'] != 1){
+  redirectTo();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,7 +194,7 @@
           <img src="<?= _PUBLIC_PATH . '/admin/' ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -231,8 +235,14 @@
           </li>
           <li class="nav-item">
             <a href="<?php echo _WEB_ROOT_PATH . '/Product' ?>" class="nav-link <?php if($data['page'] == 'product/list') echo 'active' ?>">
-              <i class="fab fa-elementor nav-icon"></i>
+            <i class="fas fa-boxes  nav-icon"></i>
               <p>Product</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?php echo _WEB_ROOT_PATH . '/Bill/show_bill' ?>" class="nav-link <?php if($data['page'] == 'bill/list') echo 'active' ?>">
+            <i class="fas fa-tasks nav-icon"></i>
+              <p>Bill</p>
             </a>
           </li>
         </ul>
@@ -342,7 +352,7 @@
   ?>
   <script>
     setTimeout(function() {
-      document.getElementById("toast-success").classList.add("hidden");
+      document.getElementById("toast-success").classList.add("d-none");
     }, 3000);
   </script>
 </body>

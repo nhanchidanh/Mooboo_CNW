@@ -79,11 +79,11 @@
                      </div>
                      <div class="product-quantity">
                         <label for="quantity">Số lượng: </label>
-                        <input type="number" value="1" id="quantity" name="quantity" class="quantity-input text-center w-25 ">
+                        <input type="number" min="1" value="1" id="quantity" name="quantity" class="quantity-input text-center w-25 ">
                      </div>
                      <div class="btn-submit">
                         <button class="btn btn-buy" type="submit">BUY NOW</button>
-                        <button class="btn btn-add-cart" type="submit">ADD TO CART</button>
+                        <button data-id="<?= $data['product']['id']?>" data-url="<?= _WEB_ROOT_PATH . '/ajax'?>" data-path="<?= _IMG_PRODUCT_PATH ?>" class="btn btn-add-cart" type="submit">ADD TO CART</button>
                      </div>
                   </form>
                   <div class="product_desc">

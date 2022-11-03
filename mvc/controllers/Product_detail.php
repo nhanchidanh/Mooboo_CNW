@@ -14,7 +14,7 @@ class Product_detail extends Controller{
         return $this->view("client",[
             'page' => 'product_detail',
             'css' => ['base', 'main','responsive', 'product_detail'],
-            'js' => ['main'],
+            'js' => ['main', 'ajax'],
             'title' => 'detail',
             'product' => $product,
             'image_product' => $image_product,

@@ -49,7 +49,7 @@
 <?php
 if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
 ?>
-  <div class="alert alert-success" role="alert">
+  <div id="notify" class="alert alert-success" role="alert">
     <?php echo $_SESSION['msg'] ?>
   </div>
 <?php

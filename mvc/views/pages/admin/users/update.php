@@ -66,5 +66,5 @@ if (!empty($data['msg'])) {
     </div>
   </div>
   <input type="hidden" name="update_user" value="update_user">
-  <button type="submit" class="btn btn-primary bg-[#000] text-slate-50 mb-3 ml-2 rounded-lg inline-block hover:bg-[#eb6420] hover:text-slate-50 transition-all duration-300">Update</button>
+  <button type="submit" class="btn btn-primary">Update</button>
 </form>

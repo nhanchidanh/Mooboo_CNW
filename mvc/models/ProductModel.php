@@ -1,17 +1,7 @@
 <?php
 class ProductModel extends DB
 {
-    function countPro($keyword = '') {
-        $number = "SELECT * FROM product WHERE 1";
-        if(!empty($keyword)){
-            $number .= " AND name like '%" . $keyword . "%'";
-        }
-        return count($this->pdo_query($number));
-
-    }
-
-
-    function getAll($keyword = '', $id = 0, $cate_id = 0, $start = 0, $limit = 8)
+    function countPro($keyword = '', $id = 0, $cate_id = 0, $min = 0, $max = 99999999)
     {
         $pro = "SELECT * FROM product WHERE 1";
         if (!empty($keyword)) {
@@ -24,6 +14,25 @@ class ProductModel extends DB
         if ($cate_id > 0) {
             $pro .= " AND cate_id = $cate_id";
         }
+        $pro .= " AND price BETWEEN $min AND $max";
+        return count($this->pdo_query($pro));
+    }
+
+
+    function getAll($keyword = '', $id = 0, $cate_id = 0, $start = 0, $limit = 8, $min = 0, $max = 99999999)
+    {
+        $pro = "SELECT * FROM product WHERE 1";
+        if (!empty($keyword)) {
+            $pro .= " AND  name like '%" . $keyword . "%'";
+        }
+
+        if ($id > 0) {
+            $pro .= " AND id <> $id";
+        }
+        if ($cate_id > 0) {
+            $pro .= " AND cate_id = $cate_id";
+        }
+        $pro .= " AND price BETWEEN $min AND $max";
         $pro .= " LIMIT $start, $limit";
         return $this->pdo_query($pro);
     }

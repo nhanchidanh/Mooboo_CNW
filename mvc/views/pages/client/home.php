@@ -128,9 +128,9 @@
                               </a>
                               <div>
                                  <div class="product_add">
-                                    <a href="#" class="add-link">
+                                    <span data-path="<?= _IMG_PRODUCT_PATH ?>" data-id="<?= $data['new_product'][$i]['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>" class="add-link">
                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </a>
+                                    </span>
                                  </div>
                                  <div class="product_view">
                                     <a href="#" class="view-link">+ Quick View</a>
@@ -158,9 +158,9 @@
                               </a>
                               <div>
                                  <div class="product_add">
-                                    <a href="#" class="add-link">
+                                    <span data-path="<?= _IMG_PRODUCT_PATH ?>" data-id="<?= $data['new_product'][$i]['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>" class="add-link">
                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </a>
+                                    </span>
                                  </div>
                                  <div class="product_view">
                                     <a href="#" class="view-link">+ Quick View</a>
@@ -224,9 +224,9 @@
                               </a>
                               <div>
                                  <div class="product_add">
-                                    <a href="#" class="add-link">
+                                    <span data-path="<?= _IMG_PRODUCT_PATH ?>" data-id="<?= $trend_product['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>" class="add-link">
                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </a>
+                                    </span>
                                  </div>
                                  <div class="product_view">
                                     <a href="#" class="view-link">+ Quick View</a>

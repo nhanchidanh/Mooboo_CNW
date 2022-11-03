@@ -15,7 +15,7 @@ class Home extends Controller{
             'new_product' => $new_product,
             'trend_products' => $trend_products,
             'css' => ['base', 'main','responsive'],
-            'js' => ['main']
+            'js' => ['main','ajax']
         ]);
     }
 
