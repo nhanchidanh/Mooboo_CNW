@@ -79,4 +79,13 @@ class UserModel extends DB
         $delete = "DELETE FROM users WHERE id = '$id'";
         return $this->pdo_execute($delete);
     }
+
+    function updateProfile($id, $name, $avatar, $email, $phone, $address, $desc, $updated_at) {
+        if(empty($avatar)){
+            $update = "UPDATE users SET name = '$name', email = '$email' ,phone = '$phone', address = '$address', description = '$desc', updated_at = '$updated_at' WHERE id = '$id'";
+        }else{
+            $update = "UPDATE users SET name = '$name', avatar = '$avatar',email = '$email' ,phone = '$phone', address = '$address', description = '$desc', updated_at = '$updated_at' WHERE id = '$id'";
+        }
+        return $this->pdo_execute($update);
+    }
 }

@@ -86,7 +86,7 @@ class Auth extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
             $user = $this->users->SelectOneUser($email);
-            $message = '';
+            // $message = '';
 
             if (!empty($user)) {
                 if (password_verify($password, $user['password'])) {

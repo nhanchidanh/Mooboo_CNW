@@ -12,5 +12,5 @@ if(!empty($data['msg'])) {
     <input required type="text" class="form-control" name="groupname" placeholder="Name user group">
   </div>
   <input type="hidden" name="add_group" value="add_group">
-  <button type="submit" class="btn btn-primary">Add</button>
+  <button type="submit" class="btn btn-primary px-4">Add</button>
 </form>

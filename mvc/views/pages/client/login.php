@@ -18,7 +18,7 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-12">
-               <div class="login_form_container">
+               <div class="login_form_container" data-aos="flip-right">
                   <form id="form" action="<?php echo _WEB_ROOT_PATH.'/auth/handleLogin' ?>" method="post">
                      <div class="login_text">
                         <h2>Login</h2>

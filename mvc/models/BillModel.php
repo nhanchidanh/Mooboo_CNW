@@ -60,4 +60,9 @@ class BillModel extends DB
 		$this->pdo_execute($detail_bill);
 		return $this->pdo_execute($bill);
 	}
+
+	public function sum_bill(){
+		$sum_money = "SELECT SUM(total) AS sum_bill FROM bill";
+		return $this->pdo_query_value($sum_money);
+	}
 }

@@ -3,15 +3,31 @@ class Admin extends Controller{
 
     public function __construct()
     {
-        $this->user = $this->model('UserModel');
+        $this->users = $this->model('UserModel');
+        $this->products = $this->model('ProductModel');
+        $this->categories = $this->model('CategoryModel');
+        $this->bills = $this->model('BillModel');
     }
 
     public function index(){
-        $users = $this->user->getAll('', 0, 0);
-        
+        $countAdmin = count($this->users->getAll('',0,1));
+        $countUser = count($this->users->getAll('',0,2));
+        $countCate = count($this->categories->getAllCl());
+        $countPro = count($this->products->getAll());
+        $countBill = count($this->bills->getAllBill());
+        $sum_bill = $this->bills->sum_bill();
+        // show_array($sum_bill);
+        $users = $this->users->getAll('', 0, 0);
         return $this->view("admin",[
-            'page' => 'dashboard',
-            'users' => $users
+            'page' => 'dashboard/list',
+            'title' => 'Dashboard',
+            'users' => $users,
+            'countAdmin' => $countAdmin,
+            'countUser' => $countUser,
+            'countCate' => $countCate,
+            'countPro' => $countPro,
+            'countBill' => $countBill,
+            'sum_bill' => $sum_bill
         ]);
     }
 

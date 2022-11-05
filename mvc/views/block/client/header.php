@@ -104,8 +104,14 @@
                                     <?php
                                     if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
                                     ?>
-                                        <li><a class="dropdown-item" href="<?= _WEB_ROOT_PATH . '/admin' ?>"><?= $_SESSION['user']['name'] ?></a></li>
-                                        <li><a class="dropdown-item" href="#">My Wishlist</a></li>
+                                        <?php
+                                        if ($_SESSION['user']['gr_id'] == 1) {
+                                        ?>
+                                            <li><a class="dropdown-item" href="<?= _WEB_ROOT_PATH . '/admin' ?>">Admin</a></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <li><a class="dropdown-item" href="<?= _WEB_ROOT_PATH . '/user/profile' ?>"><?= $_SESSION['user']['name'] ?></a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>

@@ -5,6 +5,7 @@
                 <h2 class="section-title display-4">PAYMENT</h2>
             </div>
             <div class="section-detail mt-4">
+
                 <div class="wp-section-detail mb-5">
                     <form id="form" action="<?= _WEB_ROOT_PATH . '/bill/add_bill' ?>" method="post">
                         <div class="row">
@@ -14,11 +15,11 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="fullname">Fullname</label>
-                                        <input type="text" class="form-control" name="fullname" id="fullname">
+                                        <input type="text" value="<?= $_SESSION['user']['name'] ?? '' ?>" class="form-control" name="fullname" id="fullname">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="email">Email</label>
-                                        <input type="email" class="form-control" name="email" id="email">
+                                        <input type="email" value="<?= $_SESSION['user']['email'] ?? '' ?>" class="form-control" name="email" id="email">
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -78,9 +79,8 @@
                                         <input id="home-payment" checked class="form-check-input" type="radio" name="method" value="home-payment">
                                         <label for="home-payment" class="form-check-label">Home Payment</label>
                                     </div>
-                                    <div class="form-check form-check-inline d-block">
-                                        <input id="online-payment" class="form-check-input" type="radio" name="method" value="online-payment">
-                                        <label for="online-payment" class="form-check-label">Online Payment</label>
+                                    <div class="form-check form-check-inline d-block my-4">
+                                        <img class="vn_pay" width="200px" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/271048136_688107295896504_3504806688616491837_n.png?_nc_cat=107&ccb=1-7&_nc_sid=aee45a&_nc_ohc=U4H94SzKzPcAX9QQS3_&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSuAzOPp0BJYCBXGP9M4RLAUY4fVcRdPVtD8e4sKH85xg&oe=638B3D22" alt="">
                                     </div>
                                 </div>
                                 <div class="btn-order mt-3">
@@ -88,6 +88,10 @@
                                 </div>
                             </div>
                         </div>
+                    </form>
+                    <form id="submit_vnpay" action="<?= _WEB_ROOT_PATH . '/bill/vnPay' ?>" method="post">
+                        <input type="hidden" name="sum" value="<?= $sum ?>">
+                        <input type="hidden" name="redirect" value="redirect">
                     </form>
                 </div>
             </div>

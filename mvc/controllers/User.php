@@ -15,9 +15,8 @@ class User extends Controller
         if (isset($_POST['search']) && ($_POST['search'] != '')) {
             $keyword = $_POST['keyword_user'];
             $_POST['search'] = '';
-            if(!empty($_POST['group'])){
+            if (!empty($_POST['group'])) {
                 $gr_id = $_POST['group'];
-
             }
         }
         $users = $this->user->getAll($keyword, 0, (int)$gr_id);
@@ -27,7 +26,7 @@ class User extends Controller
             'users' => $users,
             'groups' => $groups,
             'js' => ['deletedata', 'search'],
-            'title'=> 'USERS'
+            'title' => 'Users'
         ]);
     }
 
@@ -58,7 +57,6 @@ class User extends Controller
                     $check = 0;
                 }
             }
-
             if ($check == 1) {
                 $type = 'danger';
                 $msg = 'User name already exists';
@@ -92,7 +90,7 @@ class User extends Controller
         if (isset($_POST['update_user']) && ($_POST['update_user'])) {
 
             $name = $_POST['username'];
-            $avatar = $this->processImg();            
+            $avatar = $this->processImg();
             $email = $_POST['email'];
             $password = $_POST['password'];
             if (!empty($password)) {
@@ -149,6 +147,7 @@ class User extends Controller
         if (!empty($user)) {
             return $this->view('admin', [
                 'page' => 'users/update',
+                'title' => 'Update user',
                 'user' => $user,
                 'groups' => $groups,
                 'js' => ['uploadimg']
@@ -166,8 +165,26 @@ class User extends Controller
         }
     }
 
-    function processImg() {
-        if(isset($_FILES['avatar'])) {
+    function profile()
+    {
+        if (isset($_SESSION['user']['email'])) {
+            $email = $_SESSION['user']['email'];
+            $user = $this->user->SelectOneUser($email);
+        }
+        return $this->view('client', [
+            'page' => 'profile',
+            'title' => 'Profile',
+            'css' => ['base', 'main', 'responsive'],
+            'js' => ['main', 'jquery.validate', 'form_validate'],
+            'user' => $user
+        ]);
+    }
+
+
+
+    function processImg()
+    {
+        if (isset($_FILES['avatar'])) {
             $date = new DateTimeImmutable();
             $fileNameArr = explode(".", $_FILES['avatar']['name']);
             $target_file = _UPLOAD_PATH . '/avt/' .  basename($date->getTimestamp() . "." . $fileNameArr[1]);
@@ -176,5 +193,32 @@ class User extends Controller
                 return $date->getTimestamp() . "." . $fileNameArr[1];
             }
         }
+    }
+
+    function update_profile()
+    {
+        if (isset($_POST['update_profile']) && ($_POST['update_profile'])) {
+            $id = $_SESSION['user']['id'];
+            $name = $_POST['name'];
+            $avatar = $this->processImg();
+            // show_array($avatar);
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
+            $desc = $_POST['description'];
+            $updated_at = date('Y-m-d H:i:s');
+
+            $status = $this->user->updateProfile($id, $name, $avatar, $email, $phone, $address, $desc, $updated_at);
+            if (isset($_SESSION['user'])) {
+                $email = $_SESSION['user']['email'];
+                $_SESSION['user'] = $this->user->SelectOneUser($email);
+            }
+            if($status){
+                $_SESSION['msg'] = " Update successfully!";
+            }else {
+                $_SESSION['msg'] = "failed to update!";
+            }
+        }
+        redirectTo('user/profile');
     }
 }

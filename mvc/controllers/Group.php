@@ -16,7 +16,7 @@ class Group extends Controller{
             'page' => 'groups/list',
             'groups' => $groups,
             'js' => ['deletedata','search'],
-            'title' => 'USER GROUP'
+            'title' => 'User group'
         ]);
     }
 
@@ -109,6 +109,7 @@ class Group extends Controller{
             if ($header === 0) {
                 return $this->view('admin', [
                     'page' => 'groups/update',
+                    'title' => 'Update group',
                     'group' => $group,
                     'msg' => $msg,
                     'type' => $type
@@ -123,6 +124,7 @@ class Group extends Controller{
         if (!empty($group)) {
             return $this->view('admin', [
                 'page' => 'groups/update',
+                'title' => 'Update group',
                 'group' => $group,
             ]);
         }

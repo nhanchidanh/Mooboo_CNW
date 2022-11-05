@@ -19,7 +19,7 @@
       <div class="container">
          <div class="row">
             <div class="col-md-5">
-               <div class="product-details-img">
+               <div class="product-details-img rounded-lg img-thumbnail shadow-sm">
                   <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                      <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -70,10 +70,6 @@
                            <i class="fa-regular fa-star"></i>
                         </span>
                      </div>
-                     <div class="product-inventory">
-                        <span class="inventory-title">Kho:</span>
-                        <span class="variant-inventory">4 sản phẩm.</span>
-                     </div>
                      <div class="product_price">
                         <span class="current_price"><?= format_money($data['product']['price']) ?></span>
                      </div>
@@ -107,7 +103,6 @@
                   <div class="item">
                      <div class="row">
                         <div class="col-12">
-
                            <div class="product_section">
                               <div class="section-img">
                                  <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $related_product['id'] ?>" class="product-img">
@@ -122,9 +117,6 @@
                                     <div class="product_view">
                                        <a href="#" class="view-link">+ Quick View</a>
                                     </div>
-                                    <div class="product_sale">
-                                       <span class="percent-count">-18%</span>
-                                    </div>
                                  </div>
                               </div>
 
@@ -134,7 +126,6 @@
                                  </h3>
                                  <div class="price-box">
                                     <span class="current-price"><?= $related_product['price'] ?></span>
-                                    <span class="old-price text-muted">500.000vnd</span>
                                  </div>
                               </div>
                            </div>

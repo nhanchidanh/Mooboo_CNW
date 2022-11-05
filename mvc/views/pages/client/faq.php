@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <nav>
                         <ol class="breadcrumb-list breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?= _WEB_ROOT_PATH ?>">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">FAQ</li>
                         </ol>
                     </nav>
@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="faq_content_wrapper">
+                    <div class="faq_content_wrapper" data-aos="fade-down" data-aos-anchor-placement="top-center">
                         <h4>Below are frequently asked questions, you may find the answer for yourself</h4>
                         <p>
                         Answers to our most frequently asked questions are just one click away.
@@ -29,11 +29,11 @@
         </div>
     </div>
 
-    <div class="accordion_area">
+    <div class="accordion_area mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="accordion" id="accordion-faq">
+                    <div class="accordion" id="accordion-faq" data-aos="fade-up" data-aos-anchor-placement="top-center">
                         <div class="card mb-3 border-bottom">
                             <div class="card-header">
                                 <a href="" data-toggle="collapse" data-target="#collapse-1" class="card-link">HOW DO I GET FREE DELIVERY ON ORDERS?</a>

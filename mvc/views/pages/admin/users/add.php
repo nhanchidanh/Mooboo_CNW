@@ -51,5 +51,5 @@ if (!empty($data['msg'])) {
     </div>
   </div>
   <input type="hidden" name="add_user" value="add_user">
-  <button type="submit" class="btn btn-primary  mb-3 ml-2  inline-block">Add</button>
+  <button type="submit" class="btn btn-primary  mb-3 ml-2 px-4">Add</button>
 </form>

@@ -66,5 +66,5 @@ if (!empty($data['msg'])) {
     </div>
   </div>
   <input type="hidden" name="update_user" value="update_user">
-  <button type="submit" class="btn btn-primary">Update</button>
+  <button type="submit" class="btn btn-primary mb-4">Update</button>
 </form>

@@ -49,4 +49,5 @@ require_once HELPER_PATH . "format_money.php";
 require_once HELPER_PATH . "redirecTo.php";
 
 require_once HELPER_PATH . "getStatusBill.php";
+
 ?>

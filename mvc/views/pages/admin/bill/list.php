@@ -3,7 +3,7 @@
     <form class="form_bill form-inline " action="" method="POST">
         <div class="">
             <select name="status" id="bill" class="custom-select select-status" required>
-                <option value="-1">Select....</option>
+                <option selected value="-1">Select....</option>
                 <option value="0">Processing</option>
                 <option value="1">In transit</option>
                 <option value="2">Delivered</option>
@@ -53,7 +53,7 @@
 <?php
 if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
 ?>
-    <div class="alert alert-success" role="alert">
+    <div id="toast-success" class="alert alert-success" role="alert">
         <?php echo $_SESSION['msg'] ?>
     </div>
 <?php

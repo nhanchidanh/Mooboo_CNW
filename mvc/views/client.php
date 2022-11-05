@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <?php if ($data['page'] === 'product_detail') echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>' ?>
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
     <?php if (isset($data['css'])) {
@@ -28,12 +29,15 @@
         <?php require_once VIEW_PAGE_PATH . 'client/' . $data['page'] . '.php' ?>
         <?php require_once VIEW_PATH . "block/client/footer.php" ?>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <?php if ($data['page'] === 'product_detail') echo '<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>' ?>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-
     <?php if (isset($data['js'])) {
         foreach ($data['js'] as $value) {
     ?>
@@ -41,7 +45,7 @@
     <?php
         }
     } ?>
-    
+
 </body>
 
 </html>

@@ -16,7 +16,7 @@
     <div class="wp_about">
         <div class="container">
             <div class="row about_section">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-up">
                     <div class="about_content">
                         <h1 class="about_title">Welcome To Mooboo Store!</h1>
                         <p class="about_info">
@@ -33,13 +33,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-down">
                     <div class="img_thumb">
                         <img class="img-fluid" src="	https://cdn.shopify.com/s/files/1/0162/4018/1312/files/about1.jpg?v=1548407718" alt="about_thumb">
                     </div>
                 </div>
             </div>
-            <div class="row about_section">
+            <div class="row about_section" data-aos="fade-up">
                 <div class="col-md-12">
                     <div class="about_content">
                         <p class="about_info">

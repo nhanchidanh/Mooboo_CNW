@@ -17,18 +17,12 @@ $(document).ready(function () {
                 required: true,
                 minlength: 5
             },
-            confirm_password: {
-                required: true,
-                minlength: 5,
-                equalTo: "#password"
-            },
             email: {
                 required: true,
                 email: true
             },
             address: "required",
             phone: "required",
-            agree: "required"
         },
         messages: {
             firstname: "Please enter a firstname",
@@ -46,9 +40,8 @@ $(document).ready(function () {
                 required: "Please enter a email address",
                 email: "Invalid email format"
             },
-            address: "Vui lòng nhập đầy đủ địa chỉ",
-            phone: "Vui lòng nhập SĐT",
-            agree: "Vui lòng đồng ý với các điều khoản của chúng tôi"
+            address: "Please enter a address",
+            phone: "Please enter a number phone",
         },
         errorElement: "div",
         errorPlacement: function (error, element) {

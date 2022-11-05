@@ -17,7 +17,7 @@
          <div class="contact_area">
             <div class="container">
                <div class="row">
-                  <div class="col-lg-6 col-md-12">
+                  <div class="col-lg-6 col-md-12" data-aos="fade-right">
                      <div class="contact_main contact_info">
                         <h3>contact us</h3>
                         <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
@@ -30,7 +30,7 @@
                         </ul>
                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-12">
+                  <div class="col-lg-6 col-md-12" data-aos="fade-left">
                      <div class="contact_main contact_form">
                         <h3>Tell us your project</h3>
                         <form class="contact_form_inner" action="" method="post">

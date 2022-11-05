@@ -60,6 +60,7 @@ class Category extends Controller{
         }
         return $this->view('admin', [
             'page' => 'category/add',
+            'title' => 'Add Category',
             'msg' => $msg,
             'type' => $type
         ]);
@@ -104,6 +105,7 @@ class Category extends Controller{
         }
         return $this->view('admin', [
             'page' => 'category/update',
+            'title' => 'Update category',
             'category' => $category,
             'msg' => $msg,
             'type' => $type

@@ -18,7 +18,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-lg-12">
-                     <div class="login_form_container">
+                     <div class="login_form_container" data-aos="flip-left">
                         <form id="form" action="<?php echo _WEB_ROOT_PATH.'/auth/handleRegister' ?>" method="post">
                            <div class="login_text register_text">
                               <h2>Create Account</h2>

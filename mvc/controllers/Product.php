@@ -23,7 +23,7 @@ class Product extends Controller
                 $cate_id = $_POST['category'];
         }
 
-        $products = $this->products->getAll($keyword, 0, (int)$cate_id);
+        $products = $this->products->getAll($keyword, 0, (int)$cate_id, 0, 1000 );
         $categories = $this->categories->getAll();
 
         return $this->view('admin', [
@@ -134,6 +134,7 @@ class Product extends Controller
         }
         return $this->view('admin', [
             'page' => 'product/add',
+            'title' => 'Add Product',
             'categories' => $categories,
             'msg' => $msg,
             'type' => $type,
@@ -201,7 +202,7 @@ class Product extends Controller
             'productImg' => $productImg,
             'msg' => $msg,
             'type' => $type,
-            'title' => 'Product',
+            'title' => 'Update product',
             'js' => ['uploadImg']
         ]);
     }

@@ -19,7 +19,7 @@ class ProductModel extends DB
     }
 
 
-    function getAll($keyword = '', $id = 0, $cate_id = 0, $start = 0, $limit = 8, $min = 0, $max = 99999999)
+    function getAll($keyword = '', $id = 0, $cate_id = 0, $start = 0, $limit = 9999, $min = 0, $max = 99999999)
     {
         $pro = "SELECT * FROM product WHERE 1";
         if (!empty($keyword)) {
@@ -189,7 +189,7 @@ class ProductModel extends DB
     }
 
     function getNewArrivals(){
-        $sql = "SELECT * from product order by created_at desc limit 10";
+        $sql = "SELECT * from product order by created_at desc";
         return $this->pdo_query($sql);
     }
 }

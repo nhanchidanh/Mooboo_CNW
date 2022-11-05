@@ -88,7 +88,7 @@ if (!empty($_SESSION['msg'])) {
                 <tr>
                     <td class="" scope="row"><?php echo $product['id'] ?></td>
                     <td class=""><?php echo $product['name'] ?></td>
-                    <td class=""><img width="100px" src="<?php echo _IMG_PRODUCT_PATH . $product['image'] ?>"></td>
+                    <td class=""><img style="object-fit: cover; object-position: center;" width="100px" height="100px" src="<?php echo _IMG_PRODUCT_PATH . $product['image'] ?>"></td>
                     <td class=""><?php echo getNameCate($product['cate_id'])['name'] ?></td>
                     <td class=""><?php echo $product['price'] ?></td>
                     <td class=""><?php echo $product['created_at'] ?></td>
@@ -97,12 +97,6 @@ if (!empty($_SESSION['msg'])) {
                 </tr>
         <?php
             }
-        } else {
-            echo '<tr>
-            <td colspan="8" class="text-center text-[#000] text-lg font-bold">
-                No data
-            </td>
-        </tr>';
         }
         ?>
     </tbody>

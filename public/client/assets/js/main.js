@@ -11,7 +11,7 @@ $(document).ready(function () {
       dots: false,
       autoplay: true,
       autoplayTimeout: 5000,
-      responsiveClass:false,
+      responsiveClass: false,
       responsive: {
          0: {
             items: 2,
@@ -35,15 +35,15 @@ $(document).ready(function () {
    $(window).scroll(function () {
       if ($(this).scrollTop() > 0) {
          $('.navbar').addClass('toggle-shadow');
-      }else if($(this).scrollTop() == 0){
+      } else if ($(this).scrollTop() == 0) {
          $('.navbar').removeClass('toggle-shadow');
-         $('.navbar-toggle').click(function (e) { 
+         $('.navbar-toggle').click(function (e) {
             e.preventDefault();
             $('.navbar').addClass('toggle-shadow');
          });
       }
    });
-  
+
 
    // Back-top
    $(window).scroll(function () {
@@ -75,7 +75,7 @@ $(document).ready(function () {
       $(this).next(".dropdown-menu").slideToggle('fast');
    });
    //swiper
-   
+
    var swiper = new Swiper(".mySwiper", {
       spaceBetween: 10,
       slidesPerView: 4,
@@ -94,11 +94,32 @@ $(document).ready(function () {
    });
 });
 
+$(document).ready(function () {
+
+
+   var readURL = function (input) {
+      if (input.files && input.files[0]) {
+         var reader = new FileReader();
+
+         reader.onload = function (e) {
+            $('.avatar').attr('src', e.target.result);
+         }
+
+         reader.readAsDataURL(input.files[0]);
+      }
+   }
+
+
+   $(".file-upload").on('change', function () {
+      readURL(this);
+   });
+});
+
 //set timeout message
 let msg = document.querySelector('#message');
-if(msg){
-   setTimeout(()=>{
+if (msg) {
+   setTimeout(() => {
       msg.classList.add("d-none")
-   },3000)
+   }, 3000)
 }
 
