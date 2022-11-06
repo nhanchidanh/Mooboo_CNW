@@ -79,7 +79,7 @@
             <div class="form-group">
 
                 <label>Số tiền:</label>
-                <label><?php echo format_money($_GET['vnp_Amount']) ?></label>
+                <label><?php echo format_money($_GET['vnp_Amount']/100) ?></label>
             </div>
             <div class="form-group">
                 <label>Nội dung thanh toán:</label>
