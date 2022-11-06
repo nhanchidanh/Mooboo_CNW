@@ -82,7 +82,6 @@ window.addEventListener('load', function () {
                     localStorage.removeItem('.url_payment');
 
                     console.log('thanh cong');
-
                 },
                 error: function (e) {
                     console.log(e);
