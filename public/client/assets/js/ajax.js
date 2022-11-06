@@ -143,7 +143,7 @@ btn_add_cart?.addEventListener('click', function (e) {
         style: "currency",
         currency: "VND",
     });
-
+    const cartItemRow = document.querySelectorAll('.item_cart');
     function addToCart(id, number, url, path_img, msg = false) {
         $.ajax({
             type: "POST",
@@ -168,16 +168,16 @@ btn_add_cart?.addEventListener('click', function (e) {
                     sum += +item.total;
                     totalLength += +item.number;
                     renderItemCart(item, path_img, url);
-                    // cartItemRow.forEach((item2, key) => {
-                    //     if (+item2.dataset.id == +item.id) {
-                    //         console.log(item2.dataset.id)
-                    //         console.log(id)
-                    //         console.log(item2)
+                    cartItemRow.forEach((item2, key) => {
+                        if (+item2.dataset.id == +item.id) {
+                            console.log(item2.dataset.id)
+                            console.log(id)
+                            console.log(item2)
 
-                    //         item2.querySelector('.sum').textContent = formatter.format(+item.total);
+                            item2.querySelector('.sum').textContent = formatter.format(+item.total);
 
-                    //     }
-                    // })
+                        }
+                    })
                 });
                 cart_notice.forEach(item => {
                     item.textContent = totalLength;
@@ -212,6 +212,45 @@ btn_add_cart?.addEventListener('click', function (e) {
             },
         });
     }
+
+    increase = document.querySelectorAll('.increase')
+    number = document.querySelectorAll('.number')
+    const list_Cart = document.querySelector('.list_cart');
+    list_Cart?.addEventListener('click',function(e){
+        if(e.target.matches('.increase')){
+            let number = e.target.parentElement.previousElementSibling;
+            let numberCurrent = +number.textContent+1
+            number.textContent = numberCurrent;
+            let id = e.target.parentElement.dataset.id
+            console.log(id);
+            let url = e.target.parentElement.dataset.url
+            console.log(url);
+            let path_img = e.target.parentElement.dataset.path
+            console.log(path_img);
+            addToCart(id, 1, url, path_img)
+
+        }   
+        if(e.target.matches('.decrease')){
+            let number = e.target.parentElement.nextElementSibling;
+            if(+number.textContent > 1){
+                let numberCurrent = +number.textContent-1
+                number.textContent = numberCurrent;
+            }else{
+                alert('Quantity must be than 1')
+            }
+            let id = e.target.parentElement.dataset.id
+            console.log(id);
+            let url = e.target.parentElement.dataset.url
+            console.log(url);
+            let path_img = e.target.parentElement.dataset.path
+            console.log(path_img);
+            addToCart(id, -1, url, path_img)
+       
+        }
+    })
+    
+    
+
     function renderItemCart(item, path_img, url) {
         let template = `<li class="cart_item" data-id="${item.id}">
         <div class="cart_img_section">

@@ -1,19 +1,19 @@
 <!-- <?php
-echo '<pre>';
+        echo '<pre>';
 
-$url = $_SERVER['REQUEST_URI'];
+        $url = $_SERVER['REQUEST_URI'];
 
-$urlNew = substr($url, strrpos($url, '?') + 1);
-$urlNew = explode('&', $urlNew);
+        $urlNew = substr($url, strrpos($url, '?') + 1);
+        $urlNew = explode('&', $urlNew);
 
-$arrLast = [];
+        $arrLast = [];
 
-foreach ($urlNew as $item) {
-    $itemNew = explode('=', $item);
-    $arrLast[$itemNew[0]] = $itemNew[1];
-}
-// print_r($arrLast);
-?> -->
+        foreach ($urlNew as $item) {
+            $itemNew = explode('=', $item);
+            $arrLast[$itemNew[0]] = $itemNew[1];
+        }
+        // print_r($arrLast);
+        ?> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,43 +34,43 @@ foreach ($urlNew as $item) {
 <body class="d-flex flex-column align-items-center justify-content-between" style="height:100vh">
     <!-- <?php
 
-    $vnp_HashSecret = "YNSQKGMIFYVHSJMAOAVKYYTKDXQUODUB"; //Chuỗi bí mật
+            $vnp_HashSecret = "YNSQKGMIFYVHSJMAOAVKYYTKDXQUODUB"; //Chuỗi bí mật
 
-    $startTime = date("YmdHis");
-    $expire = date('YmdHis', strtotime('+15 minutes', strtotime($startTime)));
-    $vnp_SecureHash = $_GET['vnp_SecureHash'];
-    $inputData = array();
-    foreach ($_GET as $key => $value) {
-        if (substr($key, 0, 4) == "vnp_") {
-            $inputData[$key] = $value;
-        }
-    }
+            $startTime = date("YmdHis");
+            $expire = date('YmdHis', strtotime('+15 minutes', strtotime($startTime)));
+            $vnp_SecureHash = $_GET['vnp_SecureHash'];
+            $inputData = array();
+            foreach ($_GET as $key => $value) {
+                if (substr($key, 0, 4) == "vnp_") {
+                    $inputData[$key] = $value;
+                }
+            }
 
-    unset($inputData['vnp_SecureHash']);
-    ksort($inputData);
-    $i = 0;
-    $hashData = "";
-    foreach ($inputData as $key => $value) {
-        if ($i == 1) {
-            $hashData = $hashData . '&' . urlencode($key) . "=" . urlencode($value);
-        } else {
-            $hashData = $hashData . urlencode($key) . "=" . urlencode($value);
-            $i = 1;
-        }
-    }
+            unset($inputData['vnp_SecureHash']);
+            ksort($inputData);
+            $i = 0;
+            $hashData = "";
+            foreach ($inputData as $key => $value) {
+                if ($i == 1) {
+                    $hashData = $hashData . '&' . urlencode($key) . "=" . urlencode($value);
+                } else {
+                    $hashData = $hashData . urlencode($key) . "=" . urlencode($value);
+                    $i = 1;
+                }
+            }
 
-    $secureHash = hash_hmac('sha512', $hashData, $vnp_HashSecret);
+            $secureHash = hash_hmac('sha512', $hashData, $vnp_HashSecret);
 
-    // echo $secureHash . '<br/>';
-    // echo $vnp_SecureHash;
-    // die();
-    ?> -->
+            // echo $secureHash . '<br/>';
+            // echo $vnp_SecureHash;
+            // die();
+            ?> -->
     <!--Begin display -->
     <div class="my-auto ">
-        <div class="header clearfix">
-            <h3 class="text-muted">VNPAY RESPONSE</h3>
+        <div class="header">
+            <h3 class="text-body">VNPAY RESPONSE</h3>
         </div>
-        <div class="table-responsive">
+        <div class="table">
             <div class="form-group">
                 <label>Mã đơn hàng:</label>
 
@@ -79,7 +79,7 @@ foreach ($urlNew as $item) {
             <div class="form-group">
 
                 <label>Số tiền:</label>
-                <label><?php echo $_GET['vnp_Amount'] ?></label>
+                <label><?php echo format_money($_GET['vnp_Amount']) ?></label>
             </div>
             <div class="form-group">
                 <label>Nội dung thanh toán:</label>
@@ -108,7 +108,7 @@ foreach ($urlNew as $item) {
                     <?php
                     if ($secureHash == $vnp_SecureHash) {
                         if ($_GET['vnp_ResponseCode'] == '00') {
-                            echo "<span style=  'color:blue'>GD Thanh cong</span>";
+                            echo "<span class='success_vnpay' style='color:blue'>GD Thanh cong</span>";
                         } else {
                             echo "<span style='color:red'>GD Khong thanh cong</span>";
                         }
@@ -121,9 +121,6 @@ foreach ($urlNew as $item) {
             </div>
             <a href="<?php echo _WEB_ROOT_PATH . '/bill/index' ?>">Xem đơn hàng</a>
         </div>
-        <p>
-            &nbsp;
-        </p>
         <footer class="footer">
             <p>&copy; VNPAY <?php echo date('Y') ?></p>
         </footer>

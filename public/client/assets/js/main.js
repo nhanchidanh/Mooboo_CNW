@@ -29,6 +29,8 @@ $(document).ready(function () {
       }
    })
 
+   AOS.init();
+
 
    //fix header 
 

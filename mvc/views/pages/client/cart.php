@@ -28,14 +28,15 @@
                                 <th scope="col">Remove</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="list_cart">
+
                             <?php
                             if (!empty($_SESSION['cart'])) {
                                 $sum = 0;
                                 foreach ($_SESSION['cart'] as $cart) {
                                     $sum += (int)$cart['total'];
                             ?>
-                                    <tr>
+                                    <tr class="item_cart" data-id="<?php echo $cart['id'] ?>">
                                         <th scope="row">
                                             <img width="100px" src="<?= _IMG_PRODUCT_PATH . $cart['image'] ?>" alt="">
                                         </th>
@@ -43,8 +44,12 @@
                                             <a class="font-weight-bold text-decoration-none primary_color" href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $cart['id'] ?>"><?= $cart['name'] ?></a>
                                         </td>
                                         <td><?= format_money($cart['price']) ?></td>
-                                        <td><input class="w-25" type="number" name="number" id="number" value="<?= $cart['number'] ?>" min="1"></td>
-                                        <td><?= format_money($cart['total']) ?></td>
+                                        <td>
+                                            <span class="btn btn-light" data-path="<?= _IMG_PRODUCT_PATH ?>" data-id="<?= $cart['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>"><i class="decrease fa-solid fa-minus p-2"></i></span>
+                                            <span class="number"> <?= $cart['number'] ?> </span>
+                                            <span class="btn btn-light" data-path="<?= _IMG_PRODUCT_PATH ?>" data-id="<?= $cart['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>"><i class="increase fa-solid fa-plus p-2"></i></span>
+                                        </td>
+                                        <td class="sum"><?= format_money($cart['total']) ?></td>
                                         <td>
                                             <div class="btn_group">
                                                 <button data-id="<?= $cart['id'] ?>" data-url="<?= _WEB_ROOT_PATH . '/ajax' ?>" class="btn_remove btn btn-danger py-3 px-5" type="submit">Delete</button>
@@ -55,6 +60,7 @@
                                 }
                             }
                             ?>
+
                         </tbody>
                         <tfoot>
                             <tr>
@@ -73,7 +79,7 @@
                             </tr>
                         </tfoot>
                     </table>
-    
+
                 </form>
             </div>
         </div>

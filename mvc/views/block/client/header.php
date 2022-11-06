@@ -193,7 +193,7 @@
                                 <?php
                                 if (!empty($_SESSION['user']['gr_id'])) {
                                 ?>
-                                    <div class="view_cart cart_button">
+                                    <div class="view_cart cart_button" style="padding-top: 25px;">
                                         <a href="<?= _WEB_ROOT_PATH . '/bill' ?>">My Bills</a>
                                     </div>
                                 <?php

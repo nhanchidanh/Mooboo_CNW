@@ -2,8 +2,8 @@
    <div class="slider-banner">
       <div class="container-fluid">
          <div class="row">
-            <div class="col-lg-8">
-               <div id="home-slide" class="slider carousel slide carousel-fade" data-ride="carousel">
+            <div class="col-lg-8" >
+               <div id="home-slide" class="slider carousel slide carousel-fade" data-ride="carousel" data-aos="fade-right">
                   <ol class="carousel-indicators">
                      <li data-target="#home-slide" data-slide-to="0" class="active"></li>
                      <li data-target="#home-slide" data-slide-to="1"></li>
@@ -62,7 +62,7 @@
             <div class="col-lg-4">
                <div class="row">
                   <div class="col-12">
-                     <div class="banner banner-sale banner-sneaker">
+                     <div class="banner banner-sale banner-sneaker" data-aos="fade-left">
                         <a href="#" class="banner-sneaker d-block">
                            <img class="banner-sneaker-img d-block w-100" src="<?= _PUBLIC_PATH . '/client/assets/img/men_summer.png'?>" alt="banner-sneaker">
                         </a>
@@ -76,7 +76,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6" data-aos="fade-up">
                      <div class="banner banner-sale banner-clothing">
                         <a href="#" class="banner-clothing-link">
                            <img class="banner-clothing-img d-block w-100" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/6d7a6b9e-da36-44d5-a7e4-80421b1cb274/life-unlined-chore-coat-zLhb1W.png" alt="banner-clothing">
@@ -87,7 +87,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6" data-aos="fade-up">
                      <div class="banner banner-sale banner-bag">
                         <a href="#" class="banner-bag-link">
                            <img class="banner-bag-img d-block w-100" src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/d88b2de1-fddd-4848-9793-22f9489ef139/kyrie-backpack-kCq7LV.png" alt="banner-bag">
@@ -104,7 +104,7 @@
       </div>
    </div>
 
-   <div class="new_product">
+   <div class="new_product" >
       <div class="container-fluid">
          <div class="row">
             <div class="col-12">
@@ -114,14 +114,15 @@
                </div>
             </div>
          </div>
-         <div class="product-area owl-carousel owl-theme" id="owl">
+         <div class="wp-new-arrivals">
+            <div class="product-area owl-carousel owl-theme" id="owl">
             <?php
             for ($i = 0; $i < count($data['new_product']) - 1; $i++) {
             ?>
                <div class="item">
                   <div class="row">
                      <div class="col-12">
-                        <div class="product_section">
+                        <div class="product_section" data-aos="fade-up">
                            <div class="section-img">
                               <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $data['new_product'][$i]['id'] ?>" class="product-img">
                                  <img src="<?php echo _IMG_PRODUCT_PATH . $data['new_product'][$i]['image'] ?>" alt="hinh1">
@@ -151,7 +152,7 @@
                   </div>
                   <div class="row">
                      <div class="col-12">
-                        <div class="product_section">
+                        <div class="product_section" data-aos="fade-up">
                            <div class="section-img">
                               <a href="<?= _WEB_ROOT_PATH . '/product_detail/product/' . $data['new_product'][++$i]['id'] ?>" class="product-img">
                                  <img src="<?php echo _IMG_PRODUCT_PATH . $data['new_product'][$i]['image'] ?>" alt="hinh2">
@@ -185,10 +186,12 @@
             ?>
 
          </div>
+         </div>
+         
       </div>
    </div>
 
-   <div class="banner_thumb">
+   <div class="banner_thumb" data-aos="fade-up">
       <div class="container-fluid">
          <div class="row">
             <div class="col-md-12">
@@ -210,7 +213,7 @@
                </div>
             </div>
          </div>
-         <div class="product-area owl-carousel owl-theme" id="owl">
+         <div class="product-area owl-carousel owl-theme" id="owl" data-aos="fade-up">
             <?php
             foreach ($data['trend_products'] as  $trend_product) {
             ?>
