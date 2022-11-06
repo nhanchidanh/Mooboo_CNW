@@ -47,12 +47,12 @@
 								<label class="labels">Name</label>
 								<input name="name" type="text" class="form-control" placeholder="first name" value="<?= $data['user']['name'] ?? '' ?>">
 							</div>
-							<div class="col"><label class="labels">Number Phone</label><input type="text" name="phone" class="form-control" placeholder="Điền số điện thoại" value="<?= $_SESSION['user']['phone'] ?? '' ?>"></div>
+							<div class="col"><label class="labels">Number Phone</label><input type="text" name="phone" class="form-control" placeholder="Enter your number phone" value="<?= $_SESSION['user']['phone'] ?? '' ?>"></div>
 						</div>
 						<div class="row mt-3">
 							<div class="col mb-3"><label class="labels">Email</label><input type="text" name="email" class="form-control" placeholder="" value="<?= $data['user']['email'] ?? '' ?>"></div>
 						</div>
-						<div class=""><label class="labels">Address</label><input name="address" type="text" class="form-control" placeholder="Ghi rõ địa chỉ" value="<?= $data['user']['address'] ?? '' ?>"></div>
+						<div class=""><label class="labels">Address</label><input name="address" type="text" class="form-control" placeholder="Enter your address" value="<?= $data['user']['address'] ?? '' ?>"></div>
 						<div class="mt-3"><label class="labels">Description</label><input name="desc" type="text" class="form-control" placeholder="Introduce yourself" value="<?= $data['user']['description'] ?? '' ?>"></div>
 						<input type="hidden" name="id" value="<?= $data['user']['id'] ?? '' ?>">
 

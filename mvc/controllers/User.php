@@ -78,7 +78,7 @@ class User extends Controller
             'groups' => $groups,
             'msg' => $msg,
             'type' => $type,
-            'title' => 'User',
+            'title' => 'Add User',
             'js' => ['uploadimg']
         ]);
     }

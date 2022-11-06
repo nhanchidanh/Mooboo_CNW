@@ -56,6 +56,7 @@ class Group extends Controller{
         }
         return $this->view('admin', [
             'page' => 'groups/add',
+            'title' => 'Add group',
             'msg' => $msg,
             'type' => $type
         ]);
