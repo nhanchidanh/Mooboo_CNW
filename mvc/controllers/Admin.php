@@ -16,7 +16,8 @@ class Admin extends Controller{
         $countPro = count($this->products->getAll());
         $countBill = count($this->bills->getAllBill());
         $sum_bill = $this->bills->sum_bill();
-        // show_array($sum_bill);
+        $bestSeller = $this->bills->bestSeller();
+        // show_array($bestSeller);
         $users = $this->users->getAll('', 0, 0);
         return $this->view("admin",[
             'page' => 'dashboard/list',
@@ -27,7 +28,8 @@ class Admin extends Controller{
             'countCate' => $countCate,
             'countPro' => $countPro,
             'countBill' => $countBill,
-            'sum_bill' => $sum_bill
+            'sum_bill' => $sum_bill,
+            'bestSeller' => $bestSeller
         ]);
     }
 

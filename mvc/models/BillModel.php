@@ -65,4 +65,9 @@ class BillModel extends DB
 		$sum_money = "SELECT SUM(total) AS sum_bill FROM bill";
 		return $this->pdo_query_value($sum_money);
 	}
+
+	public function bestSeller() {
+		$select = " SELECT name_pro,SUM(number) as tong  FROM detail_bill    GROUP BY id_pro  HAVING SUM(number) = (SELECT MAX(tong) as tong FROM (SELECT id_pro,SUM(number) as tong  FROM detail_bill GROUP BY id_pro) as abc)";
+		return $this->pdo_query_one($select);
+	}
 }

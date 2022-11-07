@@ -113,8 +113,6 @@ class DB
             return array_values($row)[0];
         } catch (PDOException $e) {
             throw $e;
-        } finally {
-            unset($this->conn);
         }
     }
 }
