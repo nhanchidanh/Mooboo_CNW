@@ -13,7 +13,7 @@ class Checkout extends Controller{
             'page' => 'checkout',
             'title' => 'Your Checkout',
             'css' => ['base', 'main','responsive'],
-            'js' => ['main', 'ajax', 'jquery.validate', 'form_validate', 'checkout']
+            'js' => ['main', 'ajax', 'jquery.validate', 'form_validate']
         ]);
 		}else{
 			redirectTo();

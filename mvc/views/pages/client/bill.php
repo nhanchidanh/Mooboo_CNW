@@ -9,7 +9,7 @@
 
 
 		<div class="row">
-			<div class="col-3">
+			<div class="col-3" data-aos="fade-right">
 				<div class=" p-4">
 					<span class="font-weight-bold text-center">Status</span>
 				</div>
@@ -44,7 +44,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-9">
+			<div class="col-9" data-aos="fade-left">
 				<div class="intro-heading p-4 pt-0">
 					<span class="font-weight-bold text-center"><?= $data['title'] ?></span>
 				</div>
