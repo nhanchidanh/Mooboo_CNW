@@ -2,7 +2,7 @@
     <a class="px-4 py-2 rounded-lg  btn btn-primary mb-4" href="<?php echo _WEB_ROOT_PATH . '/product/add_product' ?>">Add product</a>
     <div class="">
         <form class="form-inline form_product" action="" method="POST">
-            <div class="">
+            <div>
                 <select name="category" id="category" class="custom-select select-category" required>
                     <option>Select....</option>
                     <?php
