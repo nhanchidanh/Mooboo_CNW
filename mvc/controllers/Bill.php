@@ -55,7 +55,6 @@ class Bill extends Controller
 			$bill['detail'] = $this->bills->getDetailBill($bill['id']);
 			array_push($billsNew, $bill);
 		}
-
         return $this->view("admin", [
             'page' => 'bill/list',
             'title' => 'Bill',

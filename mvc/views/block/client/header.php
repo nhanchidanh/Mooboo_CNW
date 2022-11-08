@@ -87,15 +87,6 @@
                             <li class="nav-item ">
                                 <a href="<?= _WEB_ROOT_PATH . '/product/show_product' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'product') echo "active" ?>">Products</a>
                             </li>
-                            <li class="nav-item ">
-                                <a href="<?= _WEB_ROOT_PATH . '/faq' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'faq') echo "active" ?>">FAQ</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= _WEB_ROOT_PATH . '/about' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'about') echo "active" ?>">About Us</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a href="<?= _WEB_ROOT_PATH . '/contact' ?>" class="nav-link ml-4 <?php if ($data['page'] === 'contact') echo "active" ?>">Contact Us</a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link ml-4 dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                                     My Account

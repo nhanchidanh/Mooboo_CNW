@@ -6,7 +6,7 @@
                 <option selected value="-1">Select....</option>
                 <option value="0">Processing</option>
                 <option value="1">In transit</option>
-                <option value="2">Delivered</option>
+                <option value="2">Delivered</option>            
             </select>
             <input type="text" class="input_bill form-control" id="exampleFormControlInput1" placeholder="Search" name="keyword_bill">
             <input type="hidden" name="search" value="search">
