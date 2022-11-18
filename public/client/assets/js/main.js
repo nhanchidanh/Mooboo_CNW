@@ -1,7 +1,6 @@
 $(document).ready(function () {
    // Get height header
    var height_nav = ($(".navbar").outerHeight())
-   // alert(height_nav);
    $(".wp-content").css("margin-top", height_nav);
 
    $('.owl-carousel').owlCarousel({

@@ -2,7 +2,7 @@
 $array_request_uri = explode("/", $_SERVER['REQUEST_URI']);
 define('NAME_PROJECT', $array_request_uri[1]);
 
-define('_WEB_ROOT_PATH','http://' . $_SERVER['HTTP_HOST'] . '/' . NAME_PROJECT);
+define('_WEB_ROOT_PATH','http://localhost/' . NAME_PROJECT);
 define('_PUBLIC_PATH', _WEB_ROOT_PATH . '/public');
 define('_UPLOAD_PATH', $_SERVER['DOCUMENT_ROOT'] . '/' . NAME_PROJECT .'/upload');
 
