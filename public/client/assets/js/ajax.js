@@ -152,10 +152,6 @@ btn_add_cart?.addEventListener('click', function (e) {
             dataType: "text",
             success: function (data) {
                 let response = JSON.parse(data);
-                // console.log(response);
-                // cartContent.innerHTML = "";
-                // cartFooter.classList.remove('hidden');
-                // cartEmpty.classList.add('hidden');
                 let sum = 0;
                 let totalLength = 0;
                 let cart_notice = document.querySelectorAll('.cart-notice')
@@ -191,12 +187,6 @@ btn_add_cart?.addEventListener('click', function (e) {
                     item.textContent = formatter.format(sum);
 
                 })
-                // if (cartTotalPrice) {
-
-                //     cartTotalPrice.textContent = formatter.format(sum);
-                // }
-
-
                 if (msg) {
                     Swal.fire({
                         position: "center-center",
