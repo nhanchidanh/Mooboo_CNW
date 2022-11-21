@@ -4,7 +4,7 @@ if (!empty($data['msg'])) {
 }
 ?>
 <form method="POST" action="" enctype="multipart/form-data">
-  <div class="grid-cols-12 grid gap-4">
+  <div class="col-12">
     <div class="mb-3 col-span-6">
       <label for="exampleInputEmail1" class="form-label">Name product</label>
       <input type="text" class="form-control" name="productname" placeholder="Name product" value="<?php echo $data['product']['name'] ?>">
@@ -15,10 +15,10 @@ if (!empty($data['msg'])) {
       $mb = 'mb-5';
     }
     ?>
-    <div class="<?php echo $mb ?> col-span-6 h-[70px]" id="imgae-upload">
+    <div class="<?php echo $mb ?>" id="imgae-upload">
       <label for="image" class="form-label flex flex-col justify-center" id="upload-img">
         <span>Image Product</span>
-        <div class="flex items-center gap-3 bg-[#fff] mt-2 px-2 py-1 rounded border border-[#99a1a8] w-[483px]">
+        <div class="items-center mt-2 px-2 py-1 rounded border">
           <img src="<?php echo _PUBLIC_PATH . '/client/assets/image/image_upload.png' ?>" alt="" class="w-7">
           <span>
             Upload file
@@ -40,10 +40,10 @@ if (!empty($data['msg'])) {
       $mb = 'mb-5';
     }
     ?>
-    <div class="<?php echo $mb ?> col-span-6 h-[70px]" id="images-upload">
-      <label for="multiple-image" class="form-label flex flex-col justify-center" id="upload-imgs">
+    <div class="<?php echo $mb ?>" id="images-upload">
+      <label for="multiple-image" class="form-label justify-center" id="upload-imgs">
         <span>Images Product</span>
-        <div class="flex items-center gap-3 bg-[#fff] mt-2 px-2 py-1 rounded border border-[#99a1a8] w-[483px]">
+        <div class="items-center gap-3 mt-2 px-2 py-1 rounded border">
           <img src="<?php echo _PUBLIC_PATH . '/client/assets/image/image_upload.png' ?>" alt="" class="w-7">
           <span>
             Upload file
@@ -82,11 +82,11 @@ if (!empty($data['msg'])) {
         ?>
       </select>
     </div>
-    <div class="mb-3 col-span-6">
+    <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Price</label>
-      <input type="text" class="form-control" name="price" placeholder="Example: 205" value="<?php echo $data['product']['price'] ?>">
+      <input type="text" class="form-control" name="price"" value="<?php echo $data['product']['price'] ?>">
     </div>
-    <div class="mb-3 col-span-6">
+    <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Description</label>
       <textarea rows="4" type="text" class="form-control" name="description" placeholder="Description"><?php echo $data['product']['description'] ?></textarea>
     </div>

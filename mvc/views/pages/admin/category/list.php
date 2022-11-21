@@ -82,7 +82,7 @@ if (!empty($_SESSION['msg'])) {
             }
         } else {
             echo '<tr>
-            <td colspan="5" class="text-center text-[#000] text-lg">
+            <td colspan="5" class="text-center text-lg">
                 No data
             </td>
         </tr>';

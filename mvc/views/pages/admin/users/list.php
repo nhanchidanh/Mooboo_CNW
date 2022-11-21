@@ -90,7 +90,7 @@ if (isset($_SESSION['msg']) && $_SESSION['msg'] != '') {
                 <tr>
                     <td class="" scope="row"><?php echo $user['id'] ?></td>
                     <td class=""><?php echo $user['name'] ?></td>
-                    <td class=""><img src="<?= _AVATAR_PATH . $user['avatar'] ?>" class="img-thumbnail" width="100px"></td>
+                    <td class=""><img style="object-fit: cover; object-position: center;" width="100px" height="100px" src="<?= _AVATAR_PATH . $user['avatar'] ?>" class="img-thumbnail"></td>
                     <td class=""><?php echo getNameUserGroup($user['gr_id']) ?></td>
                     <td class=""><?php echo '<p>' . $user['phone'] . '</p>' . '<p>' . $user['email'] . '</p>' . '<p>' . $user['address'] . '</p>' ?></td>
                     <td class=""><?php echo $user['created_at'] ?></td>

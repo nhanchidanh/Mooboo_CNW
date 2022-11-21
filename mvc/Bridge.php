@@ -40,6 +40,7 @@ require_once CORE_PATH . "Controller.php";
 // Connect Database
 require_once CORE_PATH . "DB.php";
 
+//helper
 require_once HELPER_PATH . "show_array.php";
 
 require_once HELPER_PATH . "getNameCate.php";
