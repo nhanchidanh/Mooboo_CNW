@@ -91,8 +91,6 @@ class DB
             return $row;
         } catch (PDOException $e) {
             throw $e;
-        } finally {
-            // unset($this->conn);
         }
     }
     /**
